@@ -1,0 +1,192 @@
+- generic [ref=f2e1]:
+  - generic [ref=f2e12]:
+    - complementary [ref=f2e13]:
+      - img "Logo" [ref=f2e456] [cursor=pointer]
+      - navigation [ref=f2e19]:
+        - button "Home" [ref=f2e20]
+        - button "Orders" [ref=f2e26]
+        - button "Returns" [ref=f2e32]
+        - button "Products" [active] [ref=f2e39]
+        - button "Wallet" [ref=f2e45]
+        - button "Channels" [ref=f2e50]
+        - button "NDR" [ref=f2e56]
+        - button "Weight Reconciliation" [ref=f2e60]
+        - button "COD Remittance" [ref=f2e66]
+        - button "VAS" [ref=f2e71]
+        - button "Settings" [ref=f2e76]
+        - button "Escalations" [ref=f2e82]
+    - generic [ref=f2e85]:
+      - banner [ref=f2e86]:
+        - button "ShipMaxx ShipMaxx" [ref=f2e88]:
+          - img "ShipMaxx" [ref=f2e89]
+          - generic [ref=f2e90]: ShipMaxx
+        - generic:
+          - textbox "Search items, AWB, Order No, Phone No,,"
+          - button "Search"
+        - generic [ref=f2e92]:
+          - button "Add an order" [ref=f2e93]
+          - button "Track Order" [ref=f2e94]
+          - button "Rate Calculator" [ref=f2e95]
+          - button "₹133333332766.73" [ref=f2e96]
+          - button "Refresh wallet balance" [ref=f2e103]
+          - button "0" [ref=f2e107]
+          - button "AY" [ref=f2e112]
+      - generic [ref=f2e114]:
+        - button "Explore SellerPro — your business growth tool" [ref=f2e115] [cursor=pointer]:
+          - img "Grow Your Brand With SellerPro - Live Now!" [ref=f2e116]
+        - button "Hide banner" [ref=f2e117]
+      - main [ref=f2e121]:
+        - generic [ref=f2e486]:
+          - generic [ref=f2e487]:
+            - generic [ref=f2e488]:
+              - heading "Products" [level=1] [ref=f2e489]
+              - generic [ref=f2e490]:
+                - button "Import Bulk Products" [ref=f2e491]
+                - button "Create Product" [ref=f2e492]
+            - generic [ref=f2e493]:
+              - textbox "Product Name/SKU" [ref=f2e498]
+              - combobox [ref=f2e500]:
+                - generic: All Brands
+          - generic [ref=f2e502]:
+            - generic [ref=f2e504]:
+              - generic [ref=f2e505]: Name/Code
+              - generic [ref=f2e506]: Product ID's
+              - generic [ref=f2e507]: Unit Price
+              - generic [ref=f2e508]: Sellable Qty
+              - generic [ref=f2e509]: Channel
+              - generic [ref=f2e510]: Action
+            - generic [ref=f2e511]:
+              - generic [ref=f2e514]:
+                - generic [ref=f2e515]:
+                  - generic [ref=f2e516]: No Image
+                  - generic [ref=f2e518]:
+                    - paragraph [ref=f2e519]: hwjdbfb
+                    - paragraph [ref=f2e520]: "SKU: hjdbjh"
+                - paragraph [ref=f2e523]: "22721"
+                - paragraph [ref=f2e525]: ₹500.00
+                - paragraph [ref=f2e527]: "0"
+                - paragraph [ref=f2e533]: Manual
+                - generic [ref=f2e534]:
+                  - button "View Product" [ref=f2e535] [cursor=pointer]
+                  - button "Sales Channels" [ref=f2e536] [cursor=pointer]
+              - generic [ref=f2e539]:
+                - generic [ref=f2e540]:
+                  - generic [ref=f2e541]: No Image
+                  - generic [ref=f2e543]:
+                    - paragraph [ref=f2e544]: dnmx
+                    - paragraph [ref=f2e545]: "SKU: polo"
+                - paragraph [ref=f2e548]: "22183"
+                - paragraph [ref=f2e550]: ₹50.00
+                - paragraph [ref=f2e552]: "0"
+                - paragraph [ref=f2e558]: Manual
+                - generic [ref=f2e559]:
+                  - button "View Product" [ref=f2e560] [cursor=pointer]
+                  - button "Sales Channels" [ref=f2e561] [cursor=pointer]
+              - generic [ref=f2e564]:
+                - generic [ref=f2e565]:
+                  - generic [ref=f2e566]: No Image
+                  - generic [ref=f2e568]:
+                    - paragraph [ref=f2e569]: ...
+                    - paragraph [ref=f2e570]: "SKU: kjk"
+                - paragraph [ref=f2e573]: "21633"
+                - paragraph [ref=f2e575]: ₹988.00
+                - paragraph [ref=f2e577]: "0"
+                - paragraph [ref=f2e583]: Manual
+                - generic [ref=f2e584]:
+                  - button "View Product" [ref=f2e585] [cursor=pointer]
+                  - button "Sales Channels" [ref=f2e586] [cursor=pointer]
+              - generic [ref=f2e589]:
+                - generic [ref=f2e590]:
+                  - img "Organic Cotton Casual T-Shirt" [ref=f2e592]
+                  - generic [ref=f2e593]:
+                    - paragraph [ref=f2e594]: Organic Cotton Casual T-Shirt
+                    - paragraph [ref=f2e595]: "SKU: OCT-2026-005"
+                - paragraph [ref=f2e598]: "20338"
+                - paragraph [ref=f2e600]: ₹900.00
+                - paragraph [ref=f2e602]: "981"
+                - paragraph [ref=f2e608]: Qa
+                - generic [ref=f2e609]:
+                  - button "View Product" [ref=f2e610] [cursor=pointer]
+                  - button "Sales Channels" [ref=f2e611] [cursor=pointer]
+              - generic [ref=f2e614]:
+                - generic [ref=f2e615]:
+                  - img "Stainless Steel Vacuum Insulated Water Bottle – 750 ml" [ref=f2e617]
+                  - generic [ref=f2e618]:
+                    - paragraph [ref=f2e619]: Stainless Steel Vacuum Insulated Water Bottle – 750 ml
+                    - paragraph [ref=f2e620]: "SKU: WB-750-SS-001"
+                - paragraph [ref=f2e623]: "20107"
+                - paragraph [ref=f2e625]: ₹800.00
+                - paragraph [ref=f2e627]: "998"
+                - paragraph [ref=f2e633]: Qa
+                - generic [ref=f2e634]:
+                  - button "View Product" [ref=f2e635] [cursor=pointer]
+                  - button "Sales Channels" [ref=f2e636] [cursor=pointer]
+              - generic [ref=f2e639]:
+                - generic [ref=f2e640]:
+                  - generic [ref=f2e641]: No Image
+                  - generic [ref=f2e643]:
+                    - paragraph [ref=f2e644]: Bag
+                    - paragraph [ref=f2e645]: "SKU: bag"
+                - paragraph [ref=f2e648]: "13772"
+                - paragraph [ref=f2e650]: ₹1000.00
+                - paragraph [ref=f2e652]: "0"
+                - paragraph [ref=f2e658]: Manual
+                - generic [ref=f2e659]:
+                  - button "View Product" [ref=f2e660] [cursor=pointer]
+                  - button "Sales Channels" [ref=f2e661] [cursor=pointer]
+              - generic [ref=f2e664]:
+                - generic [ref=f2e665]:
+                  - generic [ref=f2e666]: No Image
+                  - generic [ref=f2e668]:
+                    - paragraph [ref=f2e669]: sabji2
+                    - paragraph [ref=f2e670]: "SKU: 2subi"
+                - paragraph [ref=f2e673]: "13016"
+                - paragraph [ref=f2e675]: ₹21.00
+                - paragraph [ref=f2e677]: "0"
+                - paragraph [ref=f2e683]: Manual
+                - generic [ref=f2e684]:
+                  - button "View Product" [ref=f2e685] [cursor=pointer]
+                  - button "Sales Channels" [ref=f2e686] [cursor=pointer]
+              - generic [ref=f2e689]:
+                - generic [ref=f2e690]:
+                  - generic [ref=f2e691]: No Image
+                  - generic [ref=f2e693]:
+                    - paragraph [ref=f2e694]: sabji1
+                    - paragraph [ref=f2e695]: "SKU: 1subi"
+                - paragraph [ref=f2e698]: "13015"
+                - paragraph [ref=f2e700]: ₹12.00
+                - paragraph [ref=f2e702]: "1"
+                - paragraph [ref=f2e708]: Manual
+                - generic [ref=f2e709]:
+                  - button "View Product" [ref=f2e710] [cursor=pointer]
+                  - button "Sales Channels" [ref=f2e711] [cursor=pointer]
+              - generic [ref=f2e714]:
+                - generic [ref=f2e715]:
+                  - generic [ref=f2e716]: No Image
+                  - generic [ref=f2e718]:
+                    - paragraph [ref=f2e719]: ShipMaxx Test Product
+                    - paragraph [ref=f2e720]: "SKU: SMAXX-TEST-001"
+                - paragraph [ref=f2e723]: "12922"
+                - paragraph [ref=f2e725]: ₹299.00
+                - paragraph [ref=f2e727]: "97"
+                - paragraph [ref=f2e733]: Qa
+                - generic [ref=f2e734]:
+                  - button "View Product" [ref=f2e735] [cursor=pointer]
+                  - button "Sales Channels" [ref=f2e736] [cursor=pointer]
+              - generic [ref=f2e739]:
+                - generic [ref=f2e740]:
+                  - img "My demo product (1)" [ref=f2e742]
+                  - generic [ref=f2e743]:
+                    - paragraph [ref=f2e744]: My demo product (1)
+                    - paragraph [ref=f2e745]: "SKU: WC-1888-1912"
+                    - generic [ref=f2e746] [cursor=pointer]: 10 more variants
+                - paragraph [ref=f2e749]: "12921"
+                - paragraph [ref=f2e751]: ₹500.00
+                - paragraph [ref=f2e753]: "2298"
+                - paragraph [ref=f2e759]: Qa
+                - generic [ref=f2e760]:
+                  - button "View Product" [ref=f2e761] [cursor=pointer]
+                  - button "Sales Channels" [ref=f2e762] [cursor=pointer]
+            - generic [ref=f2e763]: Scroll to load more
+    - region "Notifications alt+T"
+  - generic [aria-hidden] [ref=f2e455]: ₹0

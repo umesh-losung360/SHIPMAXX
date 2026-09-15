@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test';
-import { LoginPage } from '../Pages/LoginPage';
+import { LoginPage } from '../pages/LoginPage';
 
 test.describe('Shipmaxx login flow', () => {
   test('user can request OTP with the provided phone number', async ({ page }) => {

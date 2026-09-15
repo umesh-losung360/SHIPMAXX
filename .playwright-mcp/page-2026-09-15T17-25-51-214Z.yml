@@ -1,0 +1,314 @@
+- generic [ref=f2e1]:
+  - generic [ref=f2e10]:
+    - complementary [ref=f2e11]:
+      - generic [ref=f2e12]: "360"
+      - navigation [ref=f2e17]:
+        - button "Home" [ref=f2e18]
+        - button "Orders" [ref=f2e24]
+        - button "Returns" [ref=f2e30]
+        - button "Products" [ref=f2e37]
+        - button "Wallet" [ref=f2e43]
+        - button "Channels" [ref=f2e48]
+        - button "NDR" [ref=f2e54]
+        - button "Weight Reconciliation" [ref=f2e58]
+        - button "COD Remittance" [ref=f2e64]
+        - button "VAS" [ref=f2e69]
+        - button "Settings" [ref=f2e74]
+        - button "Escalations" [ref=f2e80]
+    - generic [ref=f2e83]:
+      - banner [ref=f2e84]:
+        - button "ShipMaxx ShipMaxx" [ref=f2e141]:
+          - img "ShipMaxx" [ref=f2e142]
+          - generic [ref=f2e143]: ShipMaxx
+        - generic:
+          - textbox "Search items, AWB, Order No, Phone No,,"
+          - button "Search"
+        - generic [ref=f2e85]:
+          - button "Add an order" [active] [ref=f2e86]
+          - button "Track Order" [ref=f2e87]
+          - button "Rate Calculator" [ref=f2e88]
+          - button "₹133333332766.73" [ref=f2e145]
+          - button "Refresh wallet balance" [ref=f2e96]
+          - button "0" [ref=f2e100]
+          - button "AY" [ref=f2e105]
+      - generic [ref=f2e107]:
+        - button "Explore SellerPro — your business growth tool" [ref=f2e108] [cursor=pointer]:
+          - img "Grow Your Brand With SellerPro - Live Now!" [ref=f2e109]
+        - button "Hide banner" [ref=f2e110]
+      - main [ref=f2e114]:
+        - generic [ref=f2e148]:
+          - generic [ref=f2e149]:
+            - generic [ref=f2e150]:
+              - button "Back" [ref=f2e151]
+              - heading "Create Order" [level=1] [ref=f2e154]
+              - paragraph [ref=f2e155]: Track, manage, and ship all your orders from one place.
+            - generic [ref=f2e156]:
+              - generic [ref=f2e157]:
+                - generic [ref=f2e158]:
+                  - heading "1. Pickup Address" [level=2] [ref=f2e159]
+                  - paragraph [ref=f2e160]: Select the warehouse from where the shipment will be picked up.
+                - button "Add New Address" [ref=f2e161]
+              - radiogroup [ref=f2e162]:
+                - generic [ref=f2e165]:
+                  - radio "cannuagt place , Delhi, Delhi 110001" [checked] [ref=f2e166]
+                  - generic [ref=f2e169]:
+                    - generic [ref=f2e170]:
+                      - generic [ref=f2e171] [cursor=pointer]: cannuagt place , Delhi, Delhi 110001
+                      - generic [ref=f2e172]: Default
+                    - paragraph [ref=f2e173]: Delhi, 110001, Delhi warehouse - 6350092355
+              - button "+ 11 more address" [ref=f2e174]
+            - generic [ref=f2e175]:
+              - heading "2. Payment Method" [level=2] [ref=f2e176]
+              - paragraph [ref=f2e177]: Select the payment mode, chosen by the buyer for this order.
+              - generic [ref=f2e178]:
+                - paragraph [ref=f2e185] [cursor=pointer]: Prepaid
+                - paragraph [ref=f2e193] [cursor=pointer]: COD
+            - generic [ref=f2e194]:
+              - heading "3. Customer Details" [level=2] [ref=f2e195]
+              - paragraph [ref=f2e196]: Enter the Delivery Details of your buyer for whom you are making this order
+              - generic [ref=f2e197]:
+                - generic [ref=f2e198]:
+                  - generic [ref=f2e199]:
+                    - generic [ref=f2e200]:
+                      - text: Mobile number
+                      - generic [ref=f2e201]: "*"
+                    - generic [ref=f2e202]:
+                      - textbox "+91" [disabled]
+                      - textbox "Mobile number" [ref=f2e203]
+                  - generic [ref=f2e204]:
+                    - generic [ref=f2e205]:
+                      - text: Full Name
+                      - generic [ref=f2e206]: "*"
+                    - textbox "Full Name" [ref=f2e207]
+                - generic [ref=f2e208]:
+                  - generic [ref=f2e209]:
+                    - generic [ref=f2e210]:
+                      - text: Complete Address
+                      - generic [ref=f2e211]: "*"
+                    - textbox "Complete Address" [ref=f2e212]
+                  - generic [ref=f2e213]:
+                    - generic [ref=f2e214]: Landmark (Optional)
+                    - textbox "Landmark" [ref=f2e215]
+                - generic [ref=f2e216]:
+                  - generic [ref=f2e217]:
+                    - generic [ref=f2e218]:
+                      - text: Pincode
+                      - generic [ref=f2e219]: "*"
+                    - textbox "Pincode" [ref=f2e220]
+                  - generic [ref=f2e221]:
+                    - generic [ref=f2e222]:
+                      - text: City
+                      - generic [ref=f2e223]: "*"
+                    - textbox "City" [disabled]
+                    - paragraph [ref=f2e224]: City is required
+                  - generic [ref=f2e225]:
+                    - generic [ref=f2e226]:
+                      - text: State
+                      - generic [ref=f2e227]: "*"
+                    - textbox "State" [disabled]
+                    - paragraph [ref=f2e228]: State is required
+                - generic [ref=f2e229]:
+                  - generic [ref=f2e230]: Email (Optional)
+                  - textbox "Email address" [ref=f2e231]
+                - generic [ref=f2e232]:
+                  - checkbox "Billing address same as delivery" [ref=f2e233]
+                  - generic [ref=f2e234] [cursor=pointer]: Billing address same as delivery
+            - generic [ref=f2e235]:
+              - heading "4. Billing Address" [level=2] [ref=f2e236]
+              - paragraph [ref=f2e237]: Enter billing details if different from delivery address
+              - generic [ref=f2e238]:
+                - generic [ref=f2e239]:
+                  - generic [ref=f2e240]:
+                    - generic [ref=f2e241]:
+                      - text: Mobile number
+                      - generic [ref=f2e242]: "*"
+                    - generic [ref=f2e243]:
+                      - textbox "+91" [disabled]
+                      - textbox "Mobile number" [ref=f2e244]
+                  - generic [ref=f2e245]:
+                    - generic [ref=f2e246]:
+                      - text: Full Name
+                      - generic [ref=f2e247]: "*"
+                    - textbox "Full Name" [ref=f2e248]
+                - generic [ref=f2e249]:
+                  - generic [ref=f2e250]:
+                    - generic [ref=f2e251]:
+                      - text: Complete Address
+                      - generic [ref=f2e252]: "*"
+                    - textbox "Complete Address" [ref=f2e253]
+                  - generic [ref=f2e254]:
+                    - generic [ref=f2e255]: Landmark (Optional)
+                    - textbox "Landmark" [ref=f2e256]
+                - generic [ref=f2e257]:
+                  - generic [ref=f2e258]:
+                    - generic [ref=f2e259]:
+                      - text: Pincode
+                      - generic [ref=f2e260]: "*"
+                    - textbox "Pincode" [ref=f2e261]
+                  - generic [ref=f2e262]:
+                    - generic [ref=f2e263]:
+                      - text: City
+                      - generic [ref=f2e264]: "*"
+                    - textbox "City" [disabled]
+                  - generic [ref=f2e265]:
+                    - generic [ref=f2e266]:
+                      - text: State
+                      - generic [ref=f2e267]: "*"
+                    - textbox "State" [disabled]
+                - generic [ref=f2e268]:
+                  - generic [ref=f2e269]: Email (Optional)
+                  - textbox "Email address" [ref=f2e270]
+            - generic [ref=f2e271]:
+              - heading "5. Product Details" [level=2] [ref=f2e272]
+              - generic [ref=f2e273]:
+                - generic [ref=f2e274]:
+                  - generic [ref=f2e275]:
+                    - generic [ref=f2e276]:
+                      - generic [ref=f2e277]:
+                        - text: SKU (Search Product)
+                        - generic [ref=f2e278]: "*"
+                      - textbox "SKU" [ref=f2e280]
+                    - generic [ref=f2e284]:
+                      - generic [ref=f2e285]:
+                        - text: Product Name
+                        - generic [ref=f2e286]: "*"
+                      - textbox "Product Name" [ref=f2e287]
+                  - generic [ref=f2e288]:
+                    - generic [ref=f2e289]:
+                      - generic [ref=f2e290]:
+                        - text: Unit Price
+                        - generic [ref=f2e291]: "*"
+                      - generic [ref=f2e292]:
+                        - generic [ref=f2e293]: ₹
+                        - spinbutton [ref=f2e294]: "0"
+                    - generic [ref=f2e295]:
+                      - generic [ref=f2e296]:
+                        - text: Quantity
+                        - generic [ref=f2e297]: "*"
+                      - generic [ref=f2e298]:
+                        - button [ref=f2e299]
+                        - spinbutton [ref=f2e300]: "1"
+                        - button [ref=f2e301]
+                    - generic [ref=f2e302]:
+                      - generic [ref=f2e303]: Product Discount
+                      - generic [ref=f2e304]:
+                        - generic [ref=f2e305]: ₹
+                        - spinbutton [ref=f2e306]: "0"
+                    - generic [ref=f2e307]:
+                      - generic [ref=f2e308]: Tax Rate
+                      - generic [ref=f2e309]:
+                        - spinbutton [ref=f2e310]: "0"
+                        - generic [ref=f2e311]: "%"
+                - button "Add Another Product" [ref=f2e312]
+                - generic [ref=f2e314]:
+                  - generic [ref=f2e315]:
+                    - generic [ref=f2e316]:
+                      - text: "Subtotal:"
+                      - generic [ref=f2e317]: ₹0.00
+                    - generic [ref=f2e318]:
+                      - text: "Discount:"
+                      - generic [ref=f2e319]: ₹0.00
+                    - generic [ref=f2e320]:
+                      - text: "Tax:"
+                      - generic [ref=f2e321]: ₹0.00
+                  - generic [ref=f2e322]: "Total Order Value: ₹0.00"
+            - generic [ref=f2e323]:
+              - heading "6. Packaging Details" [level=2] [ref=f2e324]
+              - paragraph [ref=f2e325]: Provide the package weight and dimensions for this order.
+              - generic [ref=f2e326]:
+                - generic [ref=f2e327]:
+                  - generic [ref=f2e328]:
+                    - text: Dead Weight
+                    - generic [ref=f2e329]: "*"
+                  - generic [ref=f2e330]:
+                    - textbox "Kg" [ref=f2e331]: "0.20"
+                    - generic [ref=f2e332]: Kg
+                - generic [ref=f2e333]:
+                  - generic [ref=f2e334]:
+                    - text: Length
+                    - generic [ref=f2e335]: "*"
+                  - generic [ref=f2e336]:
+                    - textbox "Cm" [ref=f2e337]: "10"
+                    - generic [ref=f2e338]: Cm
+                - generic [ref=f2e339]:
+                  - generic [ref=f2e340]:
+                    - text: Breadth
+                    - generic [ref=f2e341]: "*"
+                  - generic [ref=f2e342]:
+                    - textbox "Cm" [ref=f2e343]: "10"
+                    - generic [ref=f2e344]: Cm
+                - generic [ref=f2e345]:
+                  - generic [ref=f2e346]:
+                    - text: Height
+                    - generic [ref=f2e347]: "*"
+                  - generic [ref=f2e348]:
+                    - textbox "Cm" [ref=f2e349]: "10"
+                    - generic [ref=f2e350]: Cm
+                - generic [ref=f2e351]:
+                  - generic [ref=f2e352]: Volumetric Weight
+                  - generic [ref=f2e353]:
+                    - textbox "0 kg" [disabled]: "0.20"
+                    - generic [ref=f2e354]: Kg
+            - generic [ref=f2e355]:
+              - heading "7. Other Details" [level=2] [ref=f2e356]
+              - generic [ref=f2e357]:
+                - generic [ref=f2e358]:
+                  - generic [ref=f2e359]:
+                    - text: Order Number
+                    - generic [ref=f2e360]: "*"
+                  - textbox "Order Number" [ref=f2e361]
+                - generic [ref=f2e362]:
+                  - generic [ref=f2e363]: Channel
+                  - combobox [ref=f2e364]:
+                    - generic: Custom - Test11
+            - button "Create Order" [ref=f2e365]
+          - generic [ref=f2e367]:
+            - heading "Order Preview Page" [level=3] [ref=f2e368]
+            - generic [ref=f2e369]:
+              - generic [ref=f2e370]: Pickup Location
+              - generic [ref=f2e375]:
+                - paragraph [ref=f2e376]: cannuagt place , Delhi, Delhi
+                - paragraph [ref=f2e377]: Delhi • Delhi warehouse • 6350092355
+            - generic [ref=f2e378]:
+              - generic [ref=f2e379]: Customer Details
+              - paragraph [ref=f2e385]: Customer details will appear here once filled
+            - generic [ref=f2e386]:
+              - generic [ref=f2e387]: Order Items
+              - generic [ref=f2e393]:
+                - generic [ref=f2e400]:
+                  - paragraph [ref=f2e401]: Product
+                  - paragraph [ref=f2e402]: 1 items
+                - paragraph [ref=f2e403]: ₹0.00
+            - generic [ref=f2e404]:
+              - generic [ref=f2e405]:
+                - generic [ref=f2e406]: Order Details
+                - generic [ref=f2e412]:
+                  - generic [ref=f2e413]:
+                    - generic [ref=f2e414]: Order ID
+                    - generic [ref=f2e415]: NA
+                  - generic [ref=f2e416]:
+                    - generic [ref=f2e417]: Order Number
+                    - generic [ref=f2e418]: N/A
+                  - generic [ref=f2e419]:
+                    - generic [ref=f2e420]: Channel
+                    - generic [ref=f2e421]: Custom - Test11
+              - generic [ref=f2e428]:
+                - generic [ref=f2e429]: Package Details
+                - generic [ref=f2e436]:
+                  - generic [ref=f2e437]:
+                    - generic [ref=f2e438]: Box Size (L × W × H)
+                    - generic [ref=f2e439]: 10 X 10 X 10 (cm)
+                  - generic [ref=f2e440]:
+                    - generic [ref=f2e441]: Volumetric
+                    - generic [ref=f2e442]: 0.20 kg
+                  - generic [ref=f2e443]:
+                    - generic [ref=f2e444]: Dead Weight
+                    - generic [ref=f2e445]: 0.20 kg
+            - generic [ref=f2e446]:
+              - generic [ref=f2e447]: Payment Details
+              - generic [ref=f2e451]:
+                - generic [ref=f2e452]: Invoice
+                - generic [ref=f2e453]: ₹0.00
+              - generic [ref=f2e454]: COD
+    - region "Notifications alt+T"
+  - generic [aria-hidden] [ref=f2e455]: ₹0

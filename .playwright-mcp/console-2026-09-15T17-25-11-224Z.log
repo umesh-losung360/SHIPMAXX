@@ -1,0 +1,34 @@
+[     800ms] [LOG] SSO REDIRECT URL https://qa-new-sso.shipmaxx.in/login?referrer=https%3A%2F%2Fqa-2.sm-qa.shipmaxx.in%2F @ https://qa-2.sm-qa.shipmaxx.in/assets/index-Cj0C1rag.js:1
+[    1319ms] [LOG] API Base URL: https://qa-new-sso-api.shipmaxx.in/ @ https://qa-new-sso.shipmaxx.in/assets/index-hlvGFLJB.js:44
+[    9383ms] [LOG] Checking existence for: 9879879879 {isEmail: false, isPhone: true} @ https://qa-new-sso.shipmaxx.in/assets/index-hlvGFLJB.js:44
+[   10419ms] [LOG] Phone existence check result: {phone: Object} @ https://qa-new-sso.shipmaxx.in/assets/index-hlvGFLJB.js:44
+[   10420ms] [LOG] User found and verified for phone: 3 9879879879 @ https://qa-new-sso.shipmaxx.in/assets/index-hlvGFLJB.js:44
+[   10420ms] [LOG] Final existence check - userNotFound: false unverifiedMessage: null @ https://qa-new-sso.shipmaxx.in/assets/index-hlvGFLJB.js:44
+[   10420ms] [LOG] Login Validity: {isLoginValid: false, checkingExistence: false, unverifiedMessage: null, userNotFound: false} @ https://qa-new-sso.shipmaxx.in/assets/index-hlvGFLJB.js:44
+[   10988ms] [LOG] Login Phone: 9879879879 @ https://qa-new-sso.shipmaxx.in/assets/index-hlvGFLJB.js:44
+[   10988ms] [LOG] Is Email: false @ https://qa-new-sso.shipmaxx.in/assets/index-hlvGFLJB.js:44
+[   10989ms] [LOG] Is Phone: true @ https://qa-new-sso.shipmaxx.in/assets/index-hlvGFLJB.js:44
+[   19842ms] [LOG] Referrer: https://qa-2.sm-qa.shipmaxx.in/ @ https://qa-new-sso.shipmaxx.in/assets/index-hlvGFLJB.js:44
+[   19842ms] [LOG] Redirecting to: https://qa-2.sm-qa.shipmaxx.in/verify?ticket=6fc1b995-2744-46b8-b74d-8e622d71775b @ https://qa-new-sso.shipmaxx.in/assets/index-hlvGFLJB.js:44
+[   20382ms] [LOG] Verifying ticket: {ticket: 6fc1b995-2744-46b8-b74d-8e622d71775b, type: null} @ https://qa-2.sm-qa.shipmaxx.in/assets/Verify-cx3S0P73.js:0
+[   20928ms] [LOG] Verification success: {access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2I…kzMX0.YtbtPI-p6UFt97-SBICSnBBDnndhdd7qjoOkaPbchug, refresh_token: 10dde6324d662db0873970e33f0344ce90e836efeb2d37a9fb…9f75b2d40eda28ca0ce28e66a31577852aa953692a6ba0684, token_type: bearer} @ https://qa-2.sm-qa.shipmaxx.in/assets/Verify-cx3S0P73.js:0
+[   20930ms] [LOG] User info saved: {sub: 6, user_id: 6, first_name: Amarjit, last_name: Yadav, email: amarjit.yadav@losung360.com} @ https://qa-2.sm-qa.shipmaxx.in/assets/Verify-cx3S0P73.js:0
+[   27408ms] [ERROR] Failed to load resource: the server responded with a status of 401 (Unauthorized) @ https://mascotai.losung360.com/api/v1/agent/permissions:0
+[   27931ms] [ERROR] `DialogContent` requires a `DialogTitle` for the component to be accessible for screen reader users.
+
+If you want to hide the `DialogTitle`, you can wrap it with our VisuallyHidden component.
+
+For more information, see https://radix-ui.com/primitives/docs/components/dialog @ https://qa-2.sm-qa.shipmaxx.in/assets/radix-ui-ZqZJlIv1.js:4
+[   27931ms] [WARNING] Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}. @ https://qa-2.sm-qa.shipmaxx.in/assets/radix-ui-ZqZJlIv1.js:4
+[   35242ms] [LOG] errors {} false false 0 @ https://qa-2.sm-qa.shipmaxx.in/assets/CreateOrder-1PAbRDty.js:0
+[   35280ms] [LOG] errors {} false false 0 @ https://qa-2.sm-qa.shipmaxx.in/assets/CreateOrder-1PAbRDty.js:0
+[   35368ms] [LOG] errors {customerDetails: Object} false false 0 @ https://qa-2.sm-qa.shipmaxx.in/assets/CreateOrder-1PAbRDty.js:0
+[   36826ms] [LOG] errors {customerDetails: Object} false false 8 @ https://qa-2.sm-qa.shipmaxx.in/assets/CreateOrder-1PAbRDty.js:0
+[   36836ms] [LOG] errors {customerDetails: Object} false false 8 @ https://qa-2.sm-qa.shipmaxx.in/assets/CreateOrder-1PAbRDty.js:0
+[   36858ms] [LOG] errors {customerDetails: Object} false false 8 @ https://qa-2.sm-qa.shipmaxx.in/assets/CreateOrder-1PAbRDty.js:0
+[   61968ms] [LOG] errors {customerDetails: Object} false false 8 @ https://qa-2.sm-qa.shipmaxx.in/assets/CreateOrder-1PAbRDty.js:0
+[   61975ms] [WARNING] Popover is changing from uncontrolled to controlled. Components should not switch from controlled to uncontrolled (or vice versa). Decide between using a controlled or uncontrolled value for the lifetime of the component. @ https://qa-2.sm-qa.shipmaxx.in/assets/radix-ui-ZqZJlIv1.js:0
+[   62046ms] [LOG] errors {customerDetails: Object} false false 8 @ https://qa-2.sm-qa.shipmaxx.in/assets/CreateOrder-1PAbRDty.js:0
+[   62098ms] [LOG] errors {customerDetails: Object} false false 8 @ https://qa-2.sm-qa.shipmaxx.in/assets/CreateOrder-1PAbRDty.js:0
+[   62620ms] [LOG] errors {customerDetails: Object} false false 8 @ https://qa-2.sm-qa.shipmaxx.in/assets/CreateOrder-1PAbRDty.js:0
+[   63197ms] [LOG] errors {customerDetails: Object} false false 8 @ https://qa-2.sm-qa.shipmaxx.in/assets/CreateOrder-1PAbRDty.js:0

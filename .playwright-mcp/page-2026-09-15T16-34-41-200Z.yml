@@ -1,0 +1,304 @@
+- generic:
+  - generic:
+    - generic:
+      - complementary [aria-hidden]:
+        - generic: "360"
+        - navigation:
+          - button
+          - button
+          - button
+          - button
+          - button
+          - button
+          - button
+          - button
+          - button
+          - generic:
+            - button
+          - button
+          - generic:
+            - button
+      - generic [aria-hidden]:
+        - banner:
+          - generic:
+            - button:
+              - generic: ShipMaxx
+          - generic:
+            - textbox:
+              - /placeholder: Search items, AWB, Order No, Phone No,,
+            - button: Search
+          - generic:
+            - button: Add an order
+            - button: Track Order
+            - button: Rate Calculator
+            - button:
+              - generic: ₹133333332766.73
+            - button
+            - button:
+              - generic: "0"
+            - button:
+              - generic: AY
+        - generic:
+          - button
+          - button
+        - main:
+          - generic:
+            - generic:
+              - generic:
+                - heading [level=1]: Products
+                - generic:
+                  - button: Import Bulk Products
+                  - button: Create Product
+              - generic:
+                - generic:
+                  - textbox:
+                    - /placeholder: Product Name/SKU
+                - generic:
+                  - combobox:
+                    - generic: All Brands
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic: Name/Code
+                    - generic: Product ID's
+                    - generic: Unit Price
+                    - generic: Sellable Qty
+                    - generic: Channel
+                    - generic: Action
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: No Image
+                          - generic:
+                            - paragraph: hwjdbfb
+                            - paragraph: "SKU: hjdbjh"
+                        - generic:
+                          - generic:
+                            - paragraph: "22721"
+                        - generic:
+                          - paragraph: ₹500.00
+                        - generic:
+                          - paragraph: "0"
+                        - generic:
+                          - paragraph: Manual
+                        - generic:
+                          - button: View Product
+                          - button: Sales Channels
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: No Image
+                          - generic:
+                            - paragraph: dnmx
+                            - paragraph: "SKU: polo"
+                        - generic:
+                          - generic:
+                            - paragraph: "22183"
+                        - generic:
+                          - paragraph: ₹50.00
+                        - generic:
+                          - paragraph: "0"
+                        - generic:
+                          - paragraph: Manual
+                        - generic:
+                          - button: View Product
+                          - button: Sales Channels
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: No Image
+                          - generic:
+                            - paragraph: ...
+                            - paragraph: "SKU: kjk"
+                        - generic:
+                          - generic:
+                            - paragraph: "21633"
+                        - generic:
+                          - paragraph: ₹988.00
+                        - generic:
+                          - paragraph: "0"
+                        - generic:
+                          - paragraph: Manual
+                        - generic:
+                          - button: View Product
+                          - button: Sales Channels
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - paragraph: Organic Cotton Casual T-Shirt
+                            - paragraph: "SKU: OCT-2026-005"
+                        - generic:
+                          - generic:
+                            - paragraph: "20338"
+                        - generic:
+                          - paragraph: ₹900.00
+                        - generic:
+                          - paragraph: "981"
+                        - generic:
+                          - paragraph: Qa
+                        - generic:
+                          - button: View Product
+                          - button: Sales Channels
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - paragraph: Stainless Steel Vacuum Insulated Water Bottle – 750 ml
+                            - paragraph: "SKU: WB-750-SS-001"
+                        - generic:
+                          - generic:
+                            - paragraph: "20107"
+                        - generic:
+                          - paragraph: ₹800.00
+                        - generic:
+                          - paragraph: "998"
+                        - generic:
+                          - paragraph: Qa
+                        - generic:
+                          - button: View Product
+                          - button: Sales Channels
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: No Image
+                          - generic:
+                            - paragraph: Bag
+                            - paragraph: "SKU: bag"
+                        - generic:
+                          - generic:
+                            - paragraph: "13772"
+                        - generic:
+                          - paragraph: ₹1000.00
+                        - generic:
+                          - paragraph: "0"
+                        - generic:
+                          - paragraph: Manual
+                        - generic:
+                          - button: View Product
+                          - button: Sales Channels
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: No Image
+                          - generic:
+                            - paragraph: sabji2
+                            - paragraph: "SKU: 2subi"
+                        - generic:
+                          - generic:
+                            - paragraph: "13016"
+                        - generic:
+                          - paragraph: ₹21.00
+                        - generic:
+                          - paragraph: "0"
+                        - generic:
+                          - paragraph: Manual
+                        - generic:
+                          - button: View Product
+                          - button: Sales Channels
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: No Image
+                          - generic:
+                            - paragraph: sabji1
+                            - paragraph: "SKU: 1subi"
+                        - generic:
+                          - generic:
+                            - paragraph: "13015"
+                        - generic:
+                          - paragraph: ₹12.00
+                        - generic:
+                          - paragraph: "1"
+                        - generic:
+                          - paragraph: Manual
+                        - generic:
+                          - button: View Product
+                          - button: Sales Channels
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: No Image
+                          - generic:
+                            - paragraph: ShipMaxx Test Product
+                            - paragraph: "SKU: SMAXX-TEST-001"
+                        - generic:
+                          - generic:
+                            - paragraph: "12922"
+                        - generic:
+                          - paragraph: ₹299.00
+                        - generic:
+                          - paragraph: "97"
+                        - generic:
+                          - paragraph: Qa
+                        - generic:
+                          - button: View Product
+                          - button: Sales Channels
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - paragraph: My demo product (1)
+                            - paragraph: "SKU: WC-1888-1912"
+                            - generic: 10 more variants
+                        - generic:
+                          - generic:
+                            - paragraph: "12921"
+                        - generic:
+                          - paragraph: ₹500.00
+                        - generic:
+                          - paragraph: "2298"
+                        - generic:
+                          - paragraph: Qa
+                        - generic:
+                          - button: View Product
+                          - button: Sales Channels
+                - generic: Scroll to load more
+      - region "Notifications alt+T"
+  - generic [aria-hidden]: ₹0
+  - dialog [active] [ref=f2e765]:
+    - button [ref=f2e766]
+    - heading "Add product" [level=2] [ref=f2e770]
+    - generic [ref=f2e771]:
+      - tablist [ref=f2e772]:
+        - tab "Add new product" [ref=f2e773]
+        - tab "Inventory" [selected] [ref=f2e849]
+      - tabpanel "Inventory" [ref=f2e850]:
+        - generic [ref=f2e851]:
+          - generic [ref=f2e852]:
+            - generic [ref=f2e853]:
+              - heading "Inventory Allocation" [level=3] [ref=f2e854]
+              - paragraph [ref=f2e855]: Assign product stock across warehouses
+            - generic [ref=f2e856]:
+              - text: "Total Stock:"
+              - generic [ref=f2e857]: 0 Units
+          - generic [ref=f2e858]:
+            - heading "+ Add Inventory" [level=4] [ref=f2e859]
+            - generic [ref=f2e860]:
+              - combobox [ref=f2e861]:
+                - generic: Select warehouse address
+              - generic [ref=f2e862]:
+                - button [ref=f2e863]
+                - spinbutton [ref=f2e864]: "0"
+                - button [ref=f2e865]
+              - button "+ Add" [disabled]
+          - generic [ref=f2e866]:
+            - generic [ref=f2e867]:
+              - text: "Total Inventory: 0 • Total Stock:"
+              - generic [ref=f2e868]: 0 Units
+            - generic [ref=f2e869]:
+              - button "← Back" [ref=f2e870]
+              - button "Save Product" [ref=f2e871]
+    - button "Close" [ref=f2e847]

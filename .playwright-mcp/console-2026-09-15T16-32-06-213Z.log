@@ -1,0 +1,45 @@
+[    6169ms] [LOG] SSO REDIRECT URL https://qa-new-sso.shipmaxx.in/login?referrer=https%3A%2F%2Fqa-2.sm-qa.shipmaxx.in%2F @ https://qa-2.sm-qa.shipmaxx.in/assets/index-Cj0C1rag.js:1
+[    7471ms] [LOG] API Base URL: https://qa-new-sso-api.shipmaxx.in/ @ https://qa-new-sso.shipmaxx.in/assets/index-hlvGFLJB.js:44
+[   67903ms] [LOG] Checking existence for: 9879879879 {isEmail: false, isPhone: true} @ https://qa-new-sso.shipmaxx.in/assets/index-hlvGFLJB.js:44
+[   70079ms] [LOG] Phone existence check result: {phone: Object} @ https://qa-new-sso.shipmaxx.in/assets/index-hlvGFLJB.js:44
+[   70080ms] [LOG] User found and verified for phone: 3 9879879879 @ https://qa-new-sso.shipmaxx.in/assets/index-hlvGFLJB.js:44
+[   70080ms] [LOG] Final existence check - userNotFound: false unverifiedMessage: null @ https://qa-new-sso.shipmaxx.in/assets/index-hlvGFLJB.js:44
+[   70081ms] [LOG] Login Validity: {isLoginValid: false, checkingExistence: false, unverifiedMessage: null, userNotFound: false} @ https://qa-new-sso.shipmaxx.in/assets/index-hlvGFLJB.js:44
+[   81581ms] [LOG] Login Phone: 9879879879 @ https://qa-new-sso.shipmaxx.in/assets/index-hlvGFLJB.js:44
+[   81582ms] [LOG] Is Email: false @ https://qa-new-sso.shipmaxx.in/assets/index-hlvGFLJB.js:44
+[   81582ms] [LOG] Is Phone: true @ https://qa-new-sso.shipmaxx.in/assets/index-hlvGFLJB.js:44
+[   99711ms] [LOG] Referrer: https://qa-2.sm-qa.shipmaxx.in/ @ https://qa-new-sso.shipmaxx.in/assets/index-hlvGFLJB.js:44
+[   99711ms] [LOG] Redirecting to: https://qa-2.sm-qa.shipmaxx.in/verify?ticket=4dec0356-eb1a-404e-88d6-27821831bdac @ https://qa-new-sso.shipmaxx.in/assets/index-hlvGFLJB.js:44
+[  100477ms] [LOG] Verifying ticket: {ticket: 4dec0356-eb1a-404e-88d6-27821831bdac, type: null} @ https://qa-2.sm-qa.shipmaxx.in/assets/Verify-cx3S0P73.js:0
+[  100640ms] [LOG] Verification success: {access_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2I…gyNn0.2QIMxgl5GHUfWUPxTi2n1m85ZVcgSFM_q5jGDn8qnhc, refresh_token: 8d4da195a8b34190258b35c87a3eb8fa35420970d7a395a136…718f8c3c8c11d120212888c299f67823e138341e0d091959a, token_type: bearer} @ https://qa-2.sm-qa.shipmaxx.in/assets/Verify-cx3S0P73.js:0
+[  100642ms] [LOG] User info saved: {sub: 6, user_id: 6, first_name: Amarjit, last_name: Yadav, email: amarjit.yadav@losung360.com} @ https://qa-2.sm-qa.shipmaxx.in/assets/Verify-cx3S0P73.js:0
+[  102926ms] [ERROR] Failed to load resource: the server responded with a status of 401 (Unauthorized) @ https://mascotai.losung360.com/api/v1/agent/permissions:0
+[  103293ms] [ERROR] `DialogContent` requires a `DialogTitle` for the component to be accessible for screen reader users.
+
+If you want to hide the `DialogTitle`, you can wrap it with our VisuallyHidden component.
+
+For more information, see https://radix-ui.com/primitives/docs/components/dialog @ https://qa-2.sm-qa.shipmaxx.in/assets/radix-ui-ZqZJlIv1.js:4
+[  103293ms] [WARNING] Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}. @ https://qa-2.sm-qa.shipmaxx.in/assets/radix-ui-ZqZJlIv1.js:4
+[  124030ms] [WARNING] Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}. @ https://qa-2.sm-qa.shipmaxx.in/assets/radix-ui-ZqZJlIv1.js:4
+[  125320ms] [WARNING] Select is changing from uncontrolled to controlled. Components should not switch from controlled to uncontrolled (or vice versa). Decide between using a controlled or uncontrolled value for the lifetime of the component. @ https://qa-2.sm-qa.shipmaxx.in/assets/radix-ui-ZqZJlIv1.js:0
+[ 1331661ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_TIMED_OUT @ https://qa-api-2.sm-qa.shipmaxx.in/api/v1/channels/all?company_id=6:0
+[ 1331662ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_TIMED_OUT @ https://qa-api-2.sm-qa.shipmaxx.in/api/v1/pulse/settings:0
+[ 1331663ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_TIMED_OUT @ https://qa-api-2.sm-qa.shipmaxx.in/api/v1/users/6:0
+[ 1331664ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_TIMED_OUT @ https://qa-api-2.sm-qa.shipmaxx.in/api/v1/warehouses?company_id=6&status=1:0
+[ 1331664ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_TIMED_OUT @ https://qa-api-2.sm-qa.shipmaxx.in/api/v1/products/list?page=1&limit=20:0
+[ 1331771ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_TIMED_OUT @ https://mascotai.losung360.com/api/v1/agent/permissions:0
+[ 1353716ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_TIMED_OUT @ https://qa-api-2.sm-qa.shipmaxx.in/api/v1/channels/all?company_id=6:0
+[ 1353717ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_TIMED_OUT @ https://qa-api-2.sm-qa.shipmaxx.in/api/v1/pulse/settings:0
+[ 1353718ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_TIMED_OUT @ https://qa-api-2.sm-qa.shipmaxx.in/api/v1/users/6:0
+[ 1353719ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_TIMED_OUT @ https://qa-api-2.sm-qa.shipmaxx.in/api/v1/warehouses?company_id=6&status=1:0
+[ 1353720ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_TIMED_OUT @ https://qa-api-2.sm-qa.shipmaxx.in/api/v1/products/list?page=1&limit=20:0
+[ 1460709ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_TIMED_OUT @ https://qa-api-2.sm-qa.shipmaxx.in/api/v1/pulse/settings:0
+[ 1460711ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_TIMED_OUT @ https://qa-api-2.sm-qa.shipmaxx.in/api/v1/users/6:0
+[ 1460712ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_TIMED_OUT @ https://qa-api-2.sm-qa.shipmaxx.in/api/v1/warehouses?company_id=6&status=1:0
+[ 1460713ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_TIMED_OUT @ https://qa-api-2.sm-qa.shipmaxx.in/api/v1/products/list?page=1&limit=20:0
+[ 1460714ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_TIMED_OUT @ https://qa-api-2.sm-qa.shipmaxx.in/api/v1/channels/all?company_id=6:0
+[ 1482776ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_TIMED_OUT @ https://qa-api-2.sm-qa.shipmaxx.in/api/v1/pulse/settings:0
+[ 1482777ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_TIMED_OUT @ https://qa-api-2.sm-qa.shipmaxx.in/api/v1/users/6:0
+[ 1482778ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_TIMED_OUT @ https://qa-api-2.sm-qa.shipmaxx.in/api/v1/warehouses?company_id=6&status=1:0
+[ 1482778ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_TIMED_OUT @ https://qa-api-2.sm-qa.shipmaxx.in/api/v1/products/list?page=1&limit=20:0
+[ 1482780ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_TIMED_OUT @ https://qa-api-2.sm-qa.shipmaxx.in/api/v1/channels/all?company_id=6:0
