@@ -1,6 +1,8 @@
 import { expect, test } from '@playwright/test';
 import { LoginPage } from '../pages/LoginPage';
 
+test.use({ storageState: { cookies: [], origins: [] } });
+
 test.describe('Shipmaxx login flow', () => {
   test('user can request OTP with the provided phone number', async ({ page }) => {
     const loginPage = new LoginPage(page);
