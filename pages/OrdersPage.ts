@@ -108,6 +108,10 @@ export class OrdersPage {
 		await expect(this.page).toHaveURL(/\/orders(?:\/|$)/i, { timeout: 30000 });
 	}
 
+	async createShipment() {
+		await this.page.getByRole('button', { name: /^Ship$/i }).first().click();
+	}
+
 	async waitForLoad() {
 		await expect(this.ordersHeading).toBeVisible({ timeout: 30000 });
 	}

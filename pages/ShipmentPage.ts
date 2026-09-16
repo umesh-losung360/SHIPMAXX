@@ -8,7 +8,7 @@ export class ShipmentPage {
 
 	constructor(page: Page) {
 		this.page = page;
-		this.trackOrderLink = page.getByRole('link', { name: /track order/i }).first();
+		this.trackOrderLink = page.getByRole('button', { name: /track order/i }).first();
 		this.shipmentHeading = page.getByRole('heading', { name: /track|shipment/i }).first();
 		this.awbInput = page.locator('input[placeholder*="AWB" i], input[placeholder*="tracking" i]').first();
 	}
