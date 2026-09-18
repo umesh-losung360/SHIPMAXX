@@ -17,6 +17,7 @@ export interface OrderDetails {
 	breadth: string;
 	height: string;
 	orderNumber: string;
+	paymentMethod?: 'COD' | 'Prepaid';
 }
 
 export class OrdersPage {
@@ -88,7 +89,7 @@ export class OrdersPage {
 		if (details.email) {
 			await this.emailInputs.first().fill(details.email);
 		}
-		await this.paymentMethod.click();
+		await this.selectPaymentMethod(details.paymentMethod ?? 'COD');
 		await this.billingSameAsDeliveryCheckbox.check();
 
 		await this.skuInput.fill(details.sku);
@@ -105,11 +106,22 @@ export class OrdersPage {
 		await this.orderNumberInput.fill(details.orderNumber);
 
 		await this.createOrderButton.click();
-		await expect(this.page).toHaveURL(/\/orders(?:\/|$)/i, { timeout: 30000 });
+		await expect(this.createOrderHeading).toBeHidden({ timeout: 30000 });
+	}
+
+	async selectPaymentMethod(paymentMethod: 'COD' | 'Prepaid') {
+		const paymentOption = this.page.locator('p').filter({ hasText: new RegExp(`^${paymentMethod}$`, 'i') }).last();
+
+		await paymentOption.waitFor({ state: 'visible', timeout: 15000 });
+		await paymentOption.click({ force: true });
+		await expect(this.page.getByText('Please select a payment method', { exact: true })).toBeHidden({ timeout: 5000 });
 	}
 
 	async createShipment() {
-		await this.page.getByRole('button', { name: /^Ship$/i }).first().click();
+		const shipButton = this.page.getByRole('button', { name: /^Ship$/i }).first();
+
+		await shipButton.waitFor({ state: 'visible', timeout: 15000 });
+		await shipButton.click();
 	}
 
 	async waitForLoad() {

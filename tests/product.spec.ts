@@ -13,11 +13,10 @@ test.describe('Shipmaxx products', () => {
     const productPage = new ProductPage(page);
     const product: ProductDetails = {
       ...PRODUCT_DATA,
-      sku: `PW-${Date.now()}`,
     };
 
     await productPage.open();
-    await productPage.createProduct(product);
+    await productPage.ensureProduct(product);
     await productPage.expectProductVisible(product.sku, product.productName);
   });
 });

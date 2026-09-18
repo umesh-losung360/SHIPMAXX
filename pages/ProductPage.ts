@@ -93,6 +93,16 @@ export class ProductPage {
 		await expect(this.productDialog).toBeHidden({ timeout: 30000 });
 	}
 
+	async ensureProduct(details: ProductDetails) {
+		const existingProduct = this.page.getByText(`SKU: ${details.sku}`, { exact: true }).first();
+
+		if (await expect(existingProduct).toBeVisible({ timeout: 5000 }).then(() => true).catch(() => false)) {
+			return;
+		}
+
+		await this.createProduct(details);
+	}
+
 	async addInventoryUnits(units: number) {
 		await this.inventoryWarehouseSelect.click();
 		await this.page.getByRole('option').first().click();

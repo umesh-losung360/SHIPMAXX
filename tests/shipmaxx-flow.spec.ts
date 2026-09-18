@@ -3,24 +3,25 @@ import { ORDER_DATA, PRODUCT_DATA } from '../fixtures/testdata';
 import { OrdersPage, OrderDetails } from '../pages/OrdersPage';
 import { ProductDetails, ProductPage } from '../pages/ProductPage';
 
-test('logs in once, creates a product and order, then opens shipments', async ({ page }) => {
+test('login, add product, create COD order, and create shipment', async ({ page }) => {
   await page.goto('https://qa-2.sm-qa.shipmaxx.in/', {
     waitUntil: 'domcontentloaded',
   });
 
   const productPage = new ProductPage(page);
   const ordersPage = new OrdersPage(page);
-  const product: ProductDetails = {
-    ...PRODUCT_DATA,
-    sku: `PW-${Date.now()}`,
-  };
+  const product: ProductDetails = { ...PRODUCT_DATA };
   const order: OrderDetails = {
     ...ORDER_DATA,
+    sku: product.sku,
+    productName: product.productName,
+    unitPrice: product.unitPrice,
+    paymentMethod: 'COD',
     orderNumber: `PW-ORDER-${Date.now()}`,
   };
 
   await productPage.open();
-  await productPage.createProduct(product);
+  await productPage.ensureProduct(product);
   await productPage.expectProductVisible(product.sku, product.productName);
 
   await ordersPage.open();

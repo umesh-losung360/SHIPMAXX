@@ -4,6 +4,7 @@ export const TEST_CREDENTIALS = {
 };
 
 export const PRODUCT_DATA = {
+  sku: 'PW-SHARED-PRODUCT',
   productName: 'Playwright Complete Detail Product',
   saleChannel: 'Custom - Test11',
   unitPrice: '1499',
