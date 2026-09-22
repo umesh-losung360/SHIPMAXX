@@ -1,6 +1,10 @@
 export const TEST_CREDENTIALS = {
   phoneNumber: '9879879879',
   otp: '963963',
+  email: 'amarjit@example.com',
+  password: 'Password@123',
+  invalidEmail: 'invalidUser@test.com',
+  invalidPassword: 'wrong-password',
 };
 
 export const PRODUCT_DATA = {

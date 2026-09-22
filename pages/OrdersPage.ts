@@ -38,6 +38,10 @@ export class OrdersPage {
 	readonly skuInput: Locator;
 	readonly productNameInput: Locator;
 	readonly productSpinbuttons: Locator;
+	readonly unitPriceInput: Locator;
+	readonly quantityInput: Locator;
+	readonly discountInput: Locator;
+	readonly taxRateInput: Locator;
 	readonly packageWeightInput: Locator;
 	readonly packageDimensionInputs: Locator;
 	readonly orderNumberInput: Locator;
@@ -60,7 +64,11 @@ export class OrdersPage {
 		this.paymentMethod = page.getByText(/^Prepaid$/i).first();
 		this.skuInput = page.getByRole('textbox', { name: 'SKU' }).first();
 		this.productNameInput = page.getByRole('textbox', { name: 'Product Name' }).first();
-		this.productSpinbuttons = page.getByRole('spinbutton');
+		this.productSpinbuttons = page.locator('input[name*="unitPrice" i], input[name*="quantity" i], input[name*="discount" i], input[name*="taxRate" i]');
+		this.unitPriceInput = page.locator('input[name*="unitPrice" i]').first();
+		this.quantityInput = page.locator('input[name*="quantity" i]').first();
+		this.discountInput = page.locator('input[name*="discount" i]').first();
+		this.taxRateInput = page.locator('input[name*="taxRate" i]').first();
 		this.packageWeightInput = page.getByRole('textbox', { name: 'Kg' }).first();
 		this.packageDimensionInputs = page.getByRole('textbox', { name: 'Cm' });
 		this.orderNumberInput = page.getByRole('textbox', { name: 'Order Number' });
@@ -94,10 +102,10 @@ export class OrdersPage {
 
 		await this.skuInput.fill(details.sku);
 		await this.productNameInput.fill(details.productName);
-		await this.productSpinbuttons.nth(0).fill(details.unitPrice);
-		await this.productSpinbuttons.nth(1).fill(details.quantity);
-		await this.productSpinbuttons.nth(2).fill(details.discount ?? '0');
-		await this.productSpinbuttons.nth(3).fill(details.taxRate ?? '0');
+		await this.unitPriceInput.fill(details.unitPrice);
+		await this.quantityInput.fill(details.quantity);
+		await this.discountInput.fill(details.discount ?? '0');
+		await this.taxRateInput.fill(details.taxRate ?? '0');
 
 		await this.packageWeightInput.fill(details.deadWeight);
 		await this.packageDimensionInputs.nth(0).fill(details.length);
