@@ -32,9 +32,9 @@ export const ORDER_DATA = {
   unitPrice: '50',
   quantity: '1',
   discount: '0',
-  taxRate: '0',
+  taxRate: '18',
   deadWeight: '0.20',
   length: '10',
-  breadth: '10',
-  height: '10',
+  breadth: '12',
+  height: '14',
 };

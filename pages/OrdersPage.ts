@@ -105,7 +105,7 @@ export class OrdersPage {
 		await this.unitPriceInput.fill(details.unitPrice);
 		await this.quantityInput.fill(details.quantity);
 		await this.discountInput.fill(details.discount ?? '0');
-		await this.taxRateInput.fill(details.taxRate ?? '0');
+		await this.taxRateInput.fill(details.taxRate ?? '18');
 
 		await this.packageWeightInput.fill(details.deadWeight);
 		await this.packageDimensionInputs.nth(0).fill(details.length);
