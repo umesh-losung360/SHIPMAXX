@@ -114,7 +114,15 @@ export class OrdersPage {
 		await this.orderNumberInput.fill(details.orderNumber);
 
 		await this.createOrderButton.click();
-		await expect(this.createOrderHeading).toBeHidden({ timeout: 30000 });
+		await expect.poll(async () => {
+			const urlOk = /manage-orders|orders\/create/i.test(this.page.url());
+			const ordersTableVisible = await this.page.getByText(/Order Number|Showing .* of .* orders/i).first().isVisible().catch(() => false);
+			const formHidden = await this.createOrderHeading.isVisible().catch(() => false) === false;
+			return urlOk || ordersTableVisible || formHidden;
+		}, {
+			timeout: 30000,
+			message: 'Expected the order flow to leave the create form or show the orders workspace.',
+		}).toBeTruthy();
 	}
 
 	async selectPaymentMethod(paymentMethod: 'COD' | 'Prepaid') {

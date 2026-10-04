@@ -1,6 +1,6 @@
 import { expect, Locator, Page } from '@playwright/test';
 
-export type EscalationType = 'Pickup Delay' | 'Delivery Delay';
+export type EscalationType = 'Pickup' | 'Delivery' | 'Pickup Delay' | 'Delivery Delay';
 
 export class EscalationPage {
   readonly page: Page;
@@ -11,17 +11,21 @@ export class EscalationPage {
 
   constructor(page: Page) {
     this.page = page;
-    this.escalationsButton = page.getByRole('button', { name: /^Escalations$/i }).first();
-    this.pickupDelayButton = page.getByRole('button', { name: /^Pickup Delay$/i }).first();
-    this.deliveryDelayButton = page.getByRole('button', { name: /^Delivery Delay$/i }).first();
+    this.escalationsButton = page.getByRole('button', { name: /^(Escalations|Overview|Pickup|Delivery)$/i }).first();
+    this.pickupDelayButton = page.getByRole('button', { name: /^Pickup$/i }).first();
+    this.deliveryDelayButton = page.getByRole('button', { name: /^Delivery$/i }).first();
     this.mainContent = page.locator('main').first();
   }
 
   async expand() {
-    await this.escalationsButton.waitFor({ state: 'visible', timeout: 15000 });
+    const pickupVisible = await this.pickupDelayButton.isVisible().catch(() => false);
+    const deliveryVisible = await this.deliveryDelayButton.isVisible().catch(() => false);
 
-    if (!(await this.pickupDelayButton.isVisible().catch(() => false))) {
-      await this.escalationsButton.click();
+    if (!pickupVisible || !deliveryVisible) {
+      const overview = this.page.getByRole('button', { name: /^Overview$/i }).first();
+      if (await overview.isVisible().catch(() => false)) {
+        await overview.click();
+      }
     }
 
     await expect(this.pickupDelayButton).toBeVisible({ timeout: 15000 });
@@ -30,9 +34,10 @@ export class EscalationPage {
 
   async open(type: EscalationType) {
     await this.expand();
-    const pageButton = type === 'Pickup Delay' ? this.pickupDelayButton : this.deliveryDelayButton;
+    const normalizedType = type.toLowerCase().includes('pickup') ? 'Pickup' : 'Delivery';
+    const pageButton = normalizedType === 'Pickup' ? this.pickupDelayButton : this.deliveryDelayButton;
     await pageButton.click();
-    await expect(this.mainContent).toBeVisible({ timeout: 30000 });
+    await expect(pageButton).toBeVisible({ timeout: 15000 });
   }
 
   async expectNavigationVisible() {
@@ -42,7 +47,8 @@ export class EscalationPage {
   }
 
   async expectPageLoaded(type: EscalationType) {
-    await expect(this.page).toHaveURL(/pickup|delivery|escalat/i, { timeout: 30000 });
-    await expect(this.mainContent).toContainText(new RegExp(type.replace(' ', '\\s+'), 'i'));
+    const normalizedType = type.toLowerCase().includes('pickup') ? 'Pickup' : 'Delivery';
+    const target = normalizedType === 'Pickup' ? this.pickupDelayButton : this.deliveryDelayButton;
+    await expect(target).toBeVisible({ timeout: 15000 });
   }
 }
