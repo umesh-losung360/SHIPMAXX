@@ -3,7 +3,7 @@ import { EscalationPage } from '../pages/EscalationPage';
 
 test.describe('Shipmaxx escalations', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('https://qa-2.sm-qa.shipmaxx.in/', {
+    await page.goto('/', {
       waitUntil: 'domcontentloaded',
     });
   });

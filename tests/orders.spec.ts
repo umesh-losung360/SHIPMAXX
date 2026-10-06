@@ -4,7 +4,7 @@ import { OrdersPage, OrderDetails } from '../pages/OrdersPage';
 
 test.describe('Shipmaxx orders', () => {
 	test.beforeEach(async ({ page }) => {
-		await page.goto('https://qa-2.sm-qa.shipmaxx.in/', {
+		await page.goto('/', {
 			waitUntil: 'domcontentloaded',
 		});
 	});

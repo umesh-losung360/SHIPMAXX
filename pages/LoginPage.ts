@@ -19,10 +19,8 @@ export class LoginPage {
   constructor(page: Page) {
     this.page = page;
     this.continueWithGoogleButton = page.locator('button:has-text("Continue with Google")').first();
-    this.phoneOrEmailInput = page
-      .locator('input[placeholder*="Phone Number or Email" i], input[type="email"], input[type="tel"], input[name*="phone" i], input[name*="email" i]')
-      .first();
-    this.getOtpButton = page.locator('button:has-text("Get OTP"), button:has-text("Get Otp"), button[type="submit"]').first();
+    this.phoneOrEmailInput = page.getByRole('textbox', { name: /email or phone number/i });
+    this.getOtpButton = page.getByRole('button', { name: /^Get OTP$/i });
     this.otpInput = page.locator('input[placeholder*="OTP" i], input[placeholder*="Enter OTP" i], input[name*="otp" i], input[maxlength="6"]').first();
     this.otpSubmitButton = page.locator('button:has-text("Verify"), button:has-text("Submit"), button:has-text("Continue"), button[type="submit"]').last();
     this.emailInput = page.locator('input[type="email" i], input[name*="email" i], input[placeholder*="Email" i], input[placeholder*="Username" i], input[autocomplete="username" i]').first();
@@ -35,7 +33,7 @@ export class LoginPage {
   }
 
   async goto() {
-    await this.page.goto('https://qa-2.sm-qa.shipmaxx.in/', {
+    await this.page.goto('/', {
       waitUntil: 'domcontentloaded',
       timeout: 60000,
     });
@@ -44,6 +42,8 @@ export class LoginPage {
   async loginWithPhoneOrEmail() {
     await this.phoneOrEmailInput.waitFor({ state: 'visible', timeout: 15000 });
     await this.phoneOrEmailInput.fill(TEST_CREDENTIALS.phoneNumber);
+    await expect(this.phoneOrEmailInput).toHaveValue(TEST_CREDENTIALS.phoneNumber);
+    await expect(this.getOtpButton).toBeEnabled({ timeout: 5000 });
     await this.getOtpButton.click();
   }
 

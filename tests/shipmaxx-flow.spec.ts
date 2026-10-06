@@ -4,7 +4,7 @@ import { OrdersPage, OrderDetails } from '../pages/OrdersPage';
 import { ProductDetails, ProductPage } from '../pages/ProductPage';
 
 test('login, add product, create COD order, and create shipment', async ({ page }) => {
-  await page.goto('https://qa-2.sm-qa.shipmaxx.in/', {
+  await page.goto('/', {
     waitUntil: 'domcontentloaded',
   });
 

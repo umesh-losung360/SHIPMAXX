@@ -3,7 +3,7 @@ import { NDRPage } from '../pages/NDRPage';
 
 test.describe('Shipmaxx NDR', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('https://qa-2.sm-qa.shipmaxx.in/', {
+    await page.goto('/', {
       waitUntil: 'domcontentloaded',
     });
   });

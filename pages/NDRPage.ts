@@ -37,7 +37,7 @@ export class NDRPage {
   }
 
   async open() {
-    await this.page.goto('https://qa-2.sm-qa.shipmaxx.in/ndr?page=1&limit=20', {
+    await this.page.goto('/ndr?page=1&limit=20', {
       waitUntil: 'domcontentloaded',
       timeout: 60000,
     });

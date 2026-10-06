@@ -1,6 +1,11 @@
 import { defineConfig, devices } from '@playwright/test';
 
 const authFile = 'playwright/.auth/user.json';
+const slowMo = Number(process.env.PLAYWRIGHT_SLOW_MO ?? '2000');
+
+if (!Number.isFinite(slowMo) || slowMo < 0) {
+  throw new Error('PLAYWRIGHT_SLOW_MO must be a non-negative number of milliseconds.');
+}
 
 /**
  * Read environment variables from file.
@@ -16,6 +21,7 @@ const authFile = 'playwright/.auth/user.json';
 export default defineConfig({
   testDir: './tests',
   outputDir: './Screenshots',
+  timeout: slowMo > 0 ? 120_000 : 30_000,
   /* Keep the login, product, and shipment flow in one worker. */
   fullyParallel: false,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -28,8 +34,9 @@ export default defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
-    // baseURL: 'http://localhost:3000',
+    baseURL: 'https://qa-2.sm-qa.shipmaxx.in',
 
+    launchOptions: { slowMo },
     screenshot: 'only-on-failure',
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
@@ -42,11 +49,17 @@ export default defineConfig({
       testMatch: /auth\.setup\.ts/,
     },
     {
+      name: 'login',
+      testMatch: /login\.spec\.ts/,
+      use: { ...devices['Desktop Chrome'], storageState: { cookies: [], origins: [] } },
+    },
+    {
       name: 'chromium',
+      testIgnore: /login\.spec\.ts/,
       use: { ...devices['Desktop Chrome'], storageState: authFile },
       dependencies: ['setup'],
     },
-
+/*
     {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'], storageState: authFile },
@@ -58,8 +71,9 @@ export default defineConfig({
       use: { ...devices['Desktop Safari'], storageState: authFile },
       dependencies: ['setup'],
     },
+    */
 
-    /* Test against mobile viewports. */
+    /* Test against    npx playwright show-report --port 9324 mobile viewports. */
     // {
     //   name: 'Mobile Chrome',
     //   use: { ...devices['Pixel 5'] },
