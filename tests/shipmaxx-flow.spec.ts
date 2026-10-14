@@ -3,7 +3,7 @@ import { ORDER_DATA, PRODUCT_DATA } from '../fixtures/testdata';
 import { OrdersPage, OrderDetails } from '../pages/OrdersPage';
 import { ProductDetails, ProductPage } from '../pages/ProductPage';
 
-test('login, add product, create COD order, and create shipment', async ({ page }) => {
+test('add product, create a COD order with it, and ship that order', async ({ page }) => {
   await page.goto('/', {
     waitUntil: 'domcontentloaded',
   });
@@ -26,5 +26,5 @@ test('login, add product, create COD order, and create shipment', async ({ page 
 
   await ordersPage.open();
   await ordersPage.createOrder(order);
-  await ordersPage.createShipment();
+  await ordersPage.createShipment(order.orderNumber);
 });

@@ -133,9 +133,13 @@ export class OrdersPage {
 		await expect(this.page.getByText('Please select a payment method', { exact: true })).toBeHidden({ timeout: 5000 });
 	}
 
-	async createShipment() {
-		const shipButton = this.page.getByRole('button', { name: /^Ship$/i }).first();
+	async createShipment(orderNumber: string) {
+		const orderNumberText = this.page.getByText(orderNumber, { exact: true }).first();
+		await expect(orderNumberText, `Expected the newly created order ${orderNumber} to be visible.`)
+			.toBeVisible({ timeout: 30000 });
 
+		const orderCard = orderNumberText.locator('xpath=ancestor::*[.//button[normalize-space(.)="Ship"]][1]');
+		const shipButton = orderCard.getByRole('button', { name: /^Ship$/i });
 		await shipButton.waitFor({ state: 'visible', timeout: 15000 });
 		await shipButton.click();
 	}

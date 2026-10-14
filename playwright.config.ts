@@ -56,10 +56,16 @@ export default defineConfig({
         }]
       : []),
     {
-      name: 'chromium',
-      testIgnore: /login\.spec\.ts/,
+      name: 'main-flow',
+      testMatch: /shipmaxx-flow\.spec\.ts/,
       use: { ...devices['Desktop Chrome'], storageState: authFile },
       dependencies: ['setup'],
+    },
+    {
+      name: 'chromium',
+      testIgnore: [/login\.spec\.ts/, /shipmaxx-flow\.spec\.ts/],
+      use: { ...devices['Desktop Chrome'], storageState: authFile },
+      dependencies: ['main-flow'],
     },
 /*
     {
