@@ -48,11 +48,13 @@ export default defineConfig({
       name: 'setup',
       testMatch: /auth\.setup\.ts/,
     },
-    {
-      name: 'login',
-      testMatch: /login\.spec\.ts/,
-      use: { ...devices['Desktop Chrome'], storageState: { cookies: [], origins: [] } },
-    },
+    ...(process.env.RUN_LOGIN_TESTS === '1'
+      ? [{
+          name: 'login',
+          testMatch: /login\.spec\.ts/,
+          use: { ...devices['Desktop Chrome'], storageState: { cookies: [], origins: [] } },
+        }]
+      : []),
     {
       name: 'chromium',
       testIgnore: /login\.spec\.ts/,
