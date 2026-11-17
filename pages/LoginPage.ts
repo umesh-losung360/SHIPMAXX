@@ -19,7 +19,7 @@ export class LoginPage {
   constructor(page: Page) {
     this.page = page;
     this.continueWithGoogleButton = page.locator('button:has-text("Continue with Google")').first();
-    this.phoneOrEmailInput = page.getByRole('textbox', { name: /email or phone number/i });
+    this.phoneOrEmailInput = page.getByRole('textbox', { name: /(?:phone number or email|email or phone number)/i });
     this.getOtpButton = page.getByRole('button', { name: /^Get OTP$/i });
     this.otpInput = page.locator('input[placeholder*="OTP" i], input[placeholder*="Enter OTP" i], input[name*="otp" i], input[maxlength="6"]').first();
     this.otpSubmitButton = page.locator('button:has-text("Verify"), button:has-text("Submit"), button:has-text("Continue"), button[type="submit"]').last();

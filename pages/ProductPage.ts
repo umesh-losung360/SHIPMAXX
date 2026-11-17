@@ -64,8 +64,8 @@ export class ProductPage {
 	}
 
 	async open() {
-		if (!/\/products(?:$|\?)/i.test(this.page.url())) {
-			await this.productsButton.click();
+		if (!/\/products(?:\/|$|\?)/i.test(this.page.url())) {
+			await this.page.goto('/products', { waitUntil: 'domcontentloaded' });
 		}
 		await expect(this.productsHeading).toBeVisible({ timeout: 30000 });
 	}

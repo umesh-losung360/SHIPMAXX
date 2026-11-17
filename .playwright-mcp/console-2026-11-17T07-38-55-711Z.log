@@ -1,0 +1,5 @@
+[    4000ms] [LOG] SSO REDIRECT URL https://qa-new-sso.shipmaxx.in/login?referrer=https%3A%2F%2Fqa-2.sm-qa.shipmaxx.in%2F @ https://qa-2.sm-qa.shipmaxx.in/assets/index-CoSgKJeW.js:2
+[    6329ms] [LOG] API Base URL: https://qa-new-sso-api.shipmaxx.in/ @ https://qa-new-sso.shipmaxx.in/assets/index-DNHlFqEP.js:45
+[   75642ms] [LOG] Checking existence for: invalidUser@test.com {isEmail: true, isPhone: false} @ https://qa-new-sso.shipmaxx.in/assets/index-DNHlFqEP.js:45
+[   76416ms] [LOG] Final existence check - userNotFound: false unverifiedMessage: null @ https://qa-new-sso.shipmaxx.in/assets/index-DNHlFqEP.js:45
+[   76416ms] [LOG] Login Validity: {isLoginValid: false, checkingExistence: false, unverifiedMessage: null, userNotFound: false} @ https://qa-new-sso.shipmaxx.in/assets/index-DNHlFqEP.js:45

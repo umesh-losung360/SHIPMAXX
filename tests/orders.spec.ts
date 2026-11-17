@@ -1,4 +1,4 @@
-import { test } from '@playwright/test';
+import { test } from '../fixtures/playwright-test';
 import { ORDER_DATA } from '../fixtures/testdata';
 import { OrdersPage, OrderDetails } from '../pages/OrdersPage';
 

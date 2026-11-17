@@ -76,8 +76,7 @@ export class OrdersPage {
 	}
 
 	async open() {
-		await this.ordersLink.waitFor({ state: 'visible', timeout: 15000 });
-		await this.ordersLink.click();
+		await this.page.goto('/manage-orders', { waitUntil: 'domcontentloaded' });
 		await this.waitForLoad();
 	}
 

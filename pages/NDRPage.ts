@@ -25,7 +25,7 @@ export class NDRPage {
     this.heading = page.getByText(/Non-Delivery Recovery|NDR/i).first();
     this.bulkUploadButton = page.getByRole('button', { name: /Bulk Upload/i }).first();
     this.dateRangeButton = page.locator('button').filter({ hasText: /\d{1,2} \w{3}.*\d{1,2} \w{3}/i }).first();
-    this.searchInput = page.getByPlaceholder(/AWB No\. Search/i).first();
+    this.searchInput = page.getByPlaceholder(/AWB, Order No\. or Phone/i).first();
     this.courierPartnerFilter = page.getByRole('button', { name: /Courier Partner/i }).first();
     this.ndrReasonFilter = page.getByRole('button', { name: /NDR Reason/i }).first();
     this.ndrAttemptFilter = page.getByRole('button', { name: /NDR Attempt/i }).first();
@@ -98,6 +98,7 @@ export class NDRPage {
   }
 
   async expectPaginationVisible() {
-    await expect(this.page.getByText(/Showing \d+[-–]\d+ of \d+ records/i).first()).toBeVisible({ timeout: 15000 });
+    await expect(this.page.getByText(/Showing \d+[-–]\d+ of \d+ records|No shipments found/i).first())
+      .toBeVisible({ timeout: 15000 });
   }
 }

@@ -1,4 +1,4 @@
-import { test } from '@playwright/test';
+import { test } from '../fixtures/playwright-test';
 import { EscalationPage } from '../pages/EscalationPage';
 
 test.describe('Shipmaxx escalations', () => {

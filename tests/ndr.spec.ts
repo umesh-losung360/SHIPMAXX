@@ -1,4 +1,4 @@
-import { test } from '@playwright/test';
+import { test } from '../fixtures/playwright-test';
 import { NDRPage } from '../pages/NDRPage';
 
 test.describe('Shipmaxx NDR', () => {
