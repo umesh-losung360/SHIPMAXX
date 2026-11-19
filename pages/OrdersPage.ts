@@ -138,9 +138,58 @@ export class OrdersPage {
 			.toBeVisible({ timeout: 30000 });
 
 		const orderCard = orderNumberText.locator('xpath=ancestor::*[.//button[normalize-space(.)="Ship"]][1]');
-		const shipButton = orderCard.getByRole('button', { name: /^Ship$/i });
-		await shipButton.waitFor({ state: 'visible', timeout: 15000 });
-		await shipButton.click();
+		const openShipmentButton = orderCard.getByRole('button', { name: /^Ship$/i });
+		await openShipmentButton.waitFor({ state: 'visible', timeout: 15000 });
+		await openShipmentButton.click();
+
+		await expect(this.page.getByRole('heading', { name: /^Order Details$/i })).toBeVisible({ timeout: 15000 });
+
+		await this.page.locator('.flex.flex-col.items-center.justify-center.py-12').waitFor({ state: 'hidden', timeout: 30000 }).catch(() => {});
+
+		const confirmShipmentButton = this.page.getByRole('button', { name: /^SHIP\s*(>>)?$/i }).last();
+		await confirmShipmentButton.waitFor({ state: 'visible', timeout: 15000 });
+		await confirmShipmentButton.click();
+		await expect.poll(async () => {
+			return await this.page.getByText(/^Packed|^Manifested|^Dispatched/i).first().isVisible().catch(() => false)
+				|| await this.page.getByText(/AWB|Tracking/i).first().isVisible().catch(() => false);
+		}, { timeout: 30000 }).toBeTruthy();
+	}
+
+	async cancelOrder(orderNumber: string) {
+		const orderNumberText = this.page.getByText(orderNumber, { exact: true }).first();
+		await expect(orderNumberText, `Expected the shipped order ${orderNumber} to be visible before cancellation.`)
+			.toBeVisible({ timeout: 30000 });
+
+		const orderRow = orderNumberText.locator('xpath=ancestor::*[.//button[normalize-space(.)="View Order"]][1]');
+		await orderRow.waitFor({ state: 'visible', timeout: 15000 });
+
+		const drawer = this.page.locator('.fixed.right-0').first();
+		if (await drawer.isVisible().catch(() => false)) {
+			const closeButton = drawer.getByRole('button').first();
+			await closeButton.click({ force: true });
+			await drawer.waitFor({ state: 'hidden', timeout: 10000 }).catch(() => {});
+		}
+
+		const checkbox = orderRow.getByRole('checkbox').first();
+		await checkbox.waitFor({ state: 'visible', timeout: 15000 });
+		await checkbox.check({ force: true });
+
+		const bulkActionButton = this.page.getByRole('button', { name: /Select Bulk Action/i }).first();
+		await bulkActionButton.waitFor({ state: 'visible', timeout: 15000 });
+		await bulkActionButton.click({ force: true });
+
+		const cancelButton = this.page.getByRole('button', { name: /^Cancel$/i }).first();
+		await cancelButton.waitFor({ state: 'visible', timeout: 15000 });
+		await cancelButton.click({ force: true });
+
+		await expect.poll(async () => {
+			const rowText = await orderRow.innerText().catch(() => '');
+			const cancellationVisible = await this.page.getByText(/cancelled|canceled/i).first().isVisible().catch(() => false);
+			return /cancelled|canceled/i.test(rowText) || cancellationVisible;
+		}, {
+			timeout: 30000,
+			message: `Expected order ${orderNumber} to be cancelled after the bulk cancellation action.`,
+		}).toBeTruthy();
 	}
 
 	async waitForLoad() {

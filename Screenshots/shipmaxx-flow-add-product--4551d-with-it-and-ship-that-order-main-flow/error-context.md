@@ -1,0 +1,1591 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: shipmaxx-flow.spec.ts >> add product, create a COD order with it, and ship that order
+- Location: tests\shipmaxx-flow.spec.ts:6:5
+
+# Error details
+
+```
+Error: locator.check: Clicking the checkbox did not change its state
+Call log:
+  - waiting for getByText('PW-ORDER-1795001272792', { exact: true }).first().locator('xpath=ancestor::*[.//button[normalize-space(.)="View Order"]][1]').getByRole('checkbox').first()
+    - locator resolved to <button value="on" type="button" role="checkbox" aria-checked="false" data-slot="checkbox" data-state="unchecked" class="peer border-gray-400 border-2 dark:bg-input/30 data-[state=checked]:bg-orange-500 data-[state=checked]:text-white data-[state=checked]:border-orange-500 focus-visible:border-orange-400 focus-visible:ring-orange-300/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive size-4 shrink-0 rounded-[4px] shadow-xs transition-shadow outlin…></button>
+  - attempting click action
+    - scrolling into view if needed
+    - done scrolling
+    - forcing action
+    - performing click action
+    - click action done
+    - waiting for scheduled navigations to finish
+    - navigations have finished
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f2e3]:
+  - complementary [ref=f2e4]:
+    - generic [ref=f2e5]: "360"
+    - navigation [ref=f2e10]:
+      - button "Home" [ref=f2e11]
+      - button "Orders" [ref=f2e16]
+      - button "Returns" [ref=f2e23]
+      - button "Products" [ref=f2e30]
+      - button "Wallet" [ref=f2e36]
+      - button "Channels" [ref=f2e41]
+      - button "NDR" [ref=f2e47]
+      - button "Weight Reconciliation" [ref=f2e51]
+      - button "COD Remittance" [ref=f2e57]
+      - button "VAS" [ref=f2e62]
+      - button "Pulse" [ref=f2e67]
+      - button "Settings" [ref=f2e72]
+      - button "Escalations" [ref=f2e78]
+  - generic [ref=f2e81]:
+    - banner [ref=f2e82]:
+      - button "ShipMaxx ShipMaxx" [ref=f2e84]:
+        - img "ShipMaxx" [ref=f2e85]
+        - generic [ref=f2e86]: ShipMaxx
+      - generic [ref=f2e88]:
+        - textbox "Search items, AWB, Order No, Phone No,," [ref=f2e89]
+        - button "Search" [ref=f2e90]
+      - generic [ref=f2e91]:
+        - button "Add an order" [ref=f2e92]
+        - button "Track Order" [ref=f2e93]
+        - button "Rate Calculator" [ref=f2e94]
+        - button "₹133333329046.06" [ref=f2e95]
+        - button "Refresh wallet balance" [ref=f2e102]
+        - button "0" [ref=f2e106]
+        - button "AY" [ref=f2e111]
+    - generic [ref=f2e113]:
+      - button "Explore SellerPro — your business growth tool" [ref=f2e114] [cursor=pointer]:
+        - img "Grow Your Brand With SellerPro - Live Now!" [ref=f2e115]
+      - button "Hide banner" [ref=f2e116]
+    - main [ref=f2e120]:
+      - generic [ref=f2e121]:
+        - generic [ref=f2e123]:
+          - generic [ref=f2e124]:
+            - heading "ShipMaxx Orders" [level=1] [ref=f2e125]
+            - paragraph [ref=f2e126]: Track, manage, and ship all your orders from one place.
+          - generic [ref=f2e127]:
+            - button "Import Orders" [ref=f2e128]
+            - button "Sync" [ref=f2e129]
+            - link "Create Order" [ref=f2e130] [cursor=pointer]:
+              - /url: /orders/create
+        - generic [ref=f2e131]:
+          - tablist [ref=f2e134]:
+            - tab "All" [ref=f2e135]
+            - tab "New 30" [selected] [ref=f2e136]:
+              - text: New
+              - generic [ref=f2e137]: "30"
+            - tab "Packed" [ref=f2e138]
+            - tab "Manifested" [ref=f2e139]
+            - tab "Dispatch" [ref=f2e140]
+            - tab "Delivered" [ref=f2e141]
+            - tab "RTO" [ref=f2e142]
+          - generic [ref=f2e143]:
+            - generic [ref=f2e146]:
+              - button "18 Oct 26 - 18 Nov 26" [ref=f2e148]
+              - button "More Filters" [ref=f2e152]
+              - button "Apply" [ref=f2e153]
+              - button "Reset" [ref=f2e154]
+            - generic [ref=f2e155]:
+              - button [ref=f2e156]
+              - button "Select Bulk Action" [disabled]
+        - generic [ref=f2e158]:
+          - generic [ref=f2e160]:
+            - checkbox [ref=f2e162]
+            - generic [ref=f2e163]:
+              - text: Order Snapshot
+              - generic [ref=f2e164]:
+                - button "Sort ascending" [ref=f2e165]
+                - button "Sort descending" [ref=f2e168]
+            - generic [ref=f2e171]: Payment Summary
+            - generic [ref=f2e172]: Products
+            - generic [ref=f2e173]: Customer Information
+            - generic [ref=f2e174]: Package Information
+            - generic [ref=f2e175]: Shipping Information
+            - generic [ref=f2e176]: Action
+          - generic [ref=f2e178]:
+            - checkbox [ref=f2e180]
+            - generic [ref=f2e181]:
+              - generic [ref=f2e182]:
+                - paragraph [ref=f2e183]: Order Number
+                - generic [ref=f2e184]:
+                  - generic [ref=f2e185] [cursor=pointer]: PW-ORDER-1795001272792
+                  - button [ref=f2e186]
+              - generic [ref=f2e190]:
+                - paragraph [ref=f2e191]: Creation Date
+                - paragraph [ref=f2e192]: 18-11-2026 11:28 AM
+              - generic [ref=f2e193]:
+                - paragraph [ref=f2e194]: Channel
+                - generic [ref=f2e195]: Test11
+            - generic [ref=f2e197]:
+              - generic [ref=f2e198]: cod
+              - generic [ref=f2e199]:
+                - paragraph [ref=f2e200]: Total Amount
+                - paragraph [ref=f2e201]: ₹1768.82
+              - generic [ref=f2e202]:
+                - paragraph [ref=f2e203]: COD Amount
+                - paragraph [ref=f2e204]: ₹1768.82
+            - generic [ref=f2e205]:
+              - paragraph [ref=f2e206]: Products
+              - generic [ref=f2e207]:
+                - paragraph [ref=f2e208]: Playwright Complete Detail Product
+                - paragraph [ref=f2e209]: "Qty: 1"
+            - generic [ref=f2e210]:
+              - paragraph [ref=f2e211]: Playwright Order Customer
+              - generic [ref=f2e212]:
+                - paragraph [ref=f2e213]: "9876543210"
+                - button [ref=f2e214]
+              - paragraph [ref=f2e218]: 123 Test Street
+              - paragraph [ref=f2e219]: Delhi - 110001
+              - paragraph [ref=f2e220]: Zone - A
+            - generic [ref=f2e221]:
+              - generic [ref=f2e222]:
+                - generic [ref=f2e223]:
+                  - paragraph [ref=f2e224]: Box Size (L × W × H)
+                  - generic [ref=f2e225]: "|"
+                  - button [ref=f2e226]
+                - paragraph [ref=f2e230]: 10x12x14
+              - generic [ref=f2e231]:
+                - paragraph [ref=f2e232]: Dead Weight
+                - paragraph [ref=f2e233]: 0.20 kg
+              - generic [ref=f2e234]:
+                - paragraph [ref=f2e235]: Volumetric Weight
+                - paragraph [ref=f2e236]: 0.34 kg
+            - generic [ref=f2e237]:
+              - generic [ref=f2e238]:
+                - generic [ref=f2e239]:
+                  - paragraph [ref=f2e240]: Order Status
+                  - generic [ref=f2e241]: New
+                - generic [ref=f2e242]:
+                  - paragraph [ref=f2e243]: Tracking (AWB)
+                  - paragraph [ref=f2e244]: NA
+              - generic [ref=f2e245]:
+                - generic [ref=f2e246]:
+                  - paragraph [ref=f2e247]: Courier Partner
+                  - paragraph [ref=f2e248]: —
+                - generic [ref=f2e249]:
+                  - paragraph [ref=f2e250]: Assigned On
+                  - paragraph [ref=f2e251]: NA
+            - generic [ref=f2e252]:
+              - button "Ship" [ref=f2e253]
+              - button "View Order" [ref=f2e254] [cursor=pointer]
+          - generic [ref=f2e256]:
+            - checkbox [ref=f2e258]
+            - generic [ref=f2e259]:
+              - generic [ref=f2e260]:
+                - paragraph [ref=f2e261]: Order Number
+                - generic [ref=f2e262]:
+                  - generic [ref=f2e263] [cursor=pointer]: PW-ORDER-1795001190856
+                  - button [ref=f2e264]
+              - generic [ref=f2e268]:
+                - paragraph [ref=f2e269]: Creation Date
+                - paragraph [ref=f2e270]: 18-11-2026 11:26 AM
+              - generic [ref=f2e271]:
+                - paragraph [ref=f2e272]: Channel
+                - generic [ref=f2e273]: Test11
+            - generic [ref=f2e275]:
+              - generic [ref=f2e276]: cod
+              - generic [ref=f2e277]:
+                - paragraph [ref=f2e278]: Total Amount
+                - paragraph [ref=f2e279]: ₹1768.82
+              - generic [ref=f2e280]:
+                - paragraph [ref=f2e281]: COD Amount
+                - paragraph [ref=f2e282]: ₹1768.82
+            - generic [ref=f2e283]:
+              - paragraph [ref=f2e284]: Products
+              - generic [ref=f2e285]:
+                - paragraph [ref=f2e286]: Playwright Complete Detail Product
+                - paragraph [ref=f2e287]: "Qty: 1"
+            - generic [ref=f2e288]:
+              - paragraph [ref=f2e289]: Playwright Order Customer
+              - generic [ref=f2e290]:
+                - paragraph [ref=f2e291]: "9876543210"
+                - button [ref=f2e292]
+              - paragraph [ref=f2e296]: 123 Test Street
+              - paragraph [ref=f2e297]: Delhi - 110001
+              - paragraph [ref=f2e298]: Zone - A
+            - generic [ref=f2e299]:
+              - generic [ref=f2e300]:
+                - generic [ref=f2e301]:
+                  - paragraph [ref=f2e302]: Box Size (L × W × H)
+                  - generic [ref=f2e303]: "|"
+                  - button [ref=f2e304]
+                - paragraph [ref=f2e308]: 10x12x14
+              - generic [ref=f2e309]:
+                - paragraph [ref=f2e310]: Dead Weight
+                - paragraph [ref=f2e311]: 0.20 kg
+              - generic [ref=f2e312]:
+                - paragraph [ref=f2e313]: Volumetric Weight
+                - paragraph [ref=f2e314]: 0.34 kg
+            - generic [ref=f2e315]:
+              - generic [ref=f2e316]:
+                - generic [ref=f2e317]:
+                  - paragraph [ref=f2e318]: Order Status
+                  - generic [ref=f2e319]: New
+                - generic [ref=f2e320]:
+                  - paragraph [ref=f2e321]: Tracking (AWB)
+                  - paragraph [ref=f2e322]: NA
+              - generic [ref=f2e323]:
+                - generic [ref=f2e324]:
+                  - paragraph [ref=f2e325]: Courier Partner
+                  - paragraph [ref=f2e326]: —
+                - generic [ref=f2e327]:
+                  - paragraph [ref=f2e328]: Assigned On
+                  - paragraph [ref=f2e329]: NA
+            - generic [ref=f2e330]:
+              - button "Ship" [ref=f2e331]
+              - button "View Order" [ref=f2e332] [cursor=pointer]
+          - generic [ref=f2e334]:
+            - checkbox [ref=f2e336]
+            - generic [ref=f2e337]:
+              - generic [ref=f2e338]:
+                - paragraph [ref=f2e339]: Order Number
+                - generic [ref=f2e340]:
+                  - generic [ref=f2e341] [cursor=pointer]: PW-ORDER-1795001132171
+                  - button [ref=f2e342]
+              - generic [ref=f2e346]:
+                - paragraph [ref=f2e347]: Creation Date
+                - paragraph [ref=f2e348]: 18-11-2026 11:25 AM
+              - generic [ref=f2e349]:
+                - paragraph [ref=f2e350]: Channel
+                - generic [ref=f2e351]: Test11
+            - generic [ref=f2e353]:
+              - generic [ref=f2e354]: cod
+              - generic [ref=f2e355]:
+                - paragraph [ref=f2e356]: Total Amount
+                - paragraph [ref=f2e357]: ₹1768.82
+              - generic [ref=f2e358]:
+                - paragraph [ref=f2e359]: COD Amount
+                - paragraph [ref=f2e360]: ₹1768.82
+            - generic [ref=f2e361]:
+              - paragraph [ref=f2e362]: Products
+              - generic [ref=f2e363]:
+                - paragraph [ref=f2e364]: Playwright Complete Detail Product
+                - paragraph [ref=f2e365]: "Qty: 1"
+            - generic [ref=f2e366]:
+              - paragraph [ref=f2e367]: Playwright Order Customer
+              - generic [ref=f2e368]:
+                - paragraph [ref=f2e369]: "9876543210"
+                - button [ref=f2e370]
+              - paragraph [ref=f2e374]: 123 Test Street
+              - paragraph [ref=f2e375]: Delhi - 110001
+              - paragraph [ref=f2e376]: Zone - A
+            - generic [ref=f2e377]:
+              - generic [ref=f2e378]:
+                - generic [ref=f2e379]:
+                  - paragraph [ref=f2e380]: Box Size (L × W × H)
+                  - generic [ref=f2e381]: "|"
+                  - button [ref=f2e382]
+                - paragraph [ref=f2e386]: 10x12x14
+              - generic [ref=f2e387]:
+                - paragraph [ref=f2e388]: Dead Weight
+                - paragraph [ref=f2e389]: 0.20 kg
+              - generic [ref=f2e390]:
+                - paragraph [ref=f2e391]: Volumetric Weight
+                - paragraph [ref=f2e392]: 0.34 kg
+            - generic [ref=f2e393]:
+              - generic [ref=f2e394]:
+                - generic [ref=f2e395]:
+                  - paragraph [ref=f2e396]: Order Status
+                  - generic [ref=f2e397]: New
+                - generic [ref=f2e398]:
+                  - paragraph [ref=f2e399]: Tracking (AWB)
+                  - paragraph [ref=f2e400]: NA
+              - generic [ref=f2e401]:
+                - generic [ref=f2e402]:
+                  - paragraph [ref=f2e403]: Courier Partner
+                  - paragraph [ref=f2e404]: —
+                - generic [ref=f2e405]:
+                  - paragraph [ref=f2e406]: Assigned On
+                  - paragraph [ref=f2e407]: NA
+            - generic [ref=f2e408]:
+              - button "Ship" [ref=f2e409]
+              - button "View Order" [ref=f2e410] [cursor=pointer]
+          - generic [ref=f2e412]:
+            - checkbox [ref=f2e414]
+            - generic [ref=f2e415]:
+              - generic [ref=f2e416]:
+                - paragraph [ref=f2e417]: Order Number
+                - generic [ref=f2e418]:
+                  - generic [ref=f2e419] [cursor=pointer]: PW-ORDER-1795001078672
+                  - button [ref=f2e420]
+              - generic [ref=f2e424]:
+                - paragraph [ref=f2e425]: Creation Date
+                - paragraph [ref=f2e426]: 18-11-2026 11:24 AM
+              - generic [ref=f2e427]:
+                - paragraph [ref=f2e428]: Channel
+                - generic [ref=f2e429]: Test11
+            - generic [ref=f2e431]:
+              - generic [ref=f2e432]: cod
+              - generic [ref=f2e433]:
+                - paragraph [ref=f2e434]: Total Amount
+                - paragraph [ref=f2e435]: ₹1768.82
+              - generic [ref=f2e436]:
+                - paragraph [ref=f2e437]: COD Amount
+                - paragraph [ref=f2e438]: ₹1768.82
+            - generic [ref=f2e439]:
+              - paragraph [ref=f2e440]: Products
+              - generic [ref=f2e441]:
+                - paragraph [ref=f2e442]: Playwright Complete Detail Product
+                - paragraph [ref=f2e443]: "Qty: 1"
+            - generic [ref=f2e444]:
+              - paragraph [ref=f2e445]: Playwright Order Customer
+              - generic [ref=f2e446]:
+                - paragraph [ref=f2e447]: "9876543210"
+                - button [ref=f2e448]
+              - paragraph [ref=f2e452]: 123 Test Street
+              - paragraph [ref=f2e453]: Delhi - 110001
+              - paragraph [ref=f2e454]: Zone - A
+            - generic [ref=f2e455]:
+              - generic [ref=f2e456]:
+                - generic [ref=f2e457]:
+                  - paragraph [ref=f2e458]: Box Size (L × W × H)
+                  - generic [ref=f2e459]: "|"
+                  - button [ref=f2e460]
+                - paragraph [ref=f2e464]: 10x12x14
+              - generic [ref=f2e465]:
+                - paragraph [ref=f2e466]: Dead Weight
+                - paragraph [ref=f2e467]: 0.20 kg
+              - generic [ref=f2e468]:
+                - paragraph [ref=f2e469]: Volumetric Weight
+                - paragraph [ref=f2e470]: 0.34 kg
+            - generic [ref=f2e471]:
+              - generic [ref=f2e472]:
+                - generic [ref=f2e473]:
+                  - paragraph [ref=f2e474]: Order Status
+                  - generic [ref=f2e475]: New
+                - generic [ref=f2e476]:
+                  - paragraph [ref=f2e477]: Tracking (AWB)
+                  - paragraph [ref=f2e478]: NA
+              - generic [ref=f2e479]:
+                - generic [ref=f2e480]:
+                  - paragraph [ref=f2e481]: Courier Partner
+                  - paragraph [ref=f2e482]: —
+                - generic [ref=f2e483]:
+                  - paragraph [ref=f2e484]: Assigned On
+                  - paragraph [ref=f2e485]: NA
+            - generic [ref=f2e486]:
+              - button "Ship" [ref=f2e487]
+              - button "View Order" [ref=f2e488] [cursor=pointer]
+          - generic [ref=f2e490]:
+            - checkbox [ref=f2e492]
+            - generic [ref=f2e493]:
+              - generic [ref=f2e494]:
+                - paragraph [ref=f2e495]: Order Number
+                - generic [ref=f2e496]:
+                  - generic [ref=f2e497] [cursor=pointer]: PW-ORDER-1795001009550
+                  - button [ref=f2e498]
+              - generic [ref=f2e502]:
+                - paragraph [ref=f2e503]: Creation Date
+                - paragraph [ref=f2e504]: 18-11-2026 11:23 AM
+              - generic [ref=f2e505]:
+                - paragraph [ref=f2e506]: Channel
+                - generic [ref=f2e507]: Test11
+            - generic [ref=f2e509]:
+              - generic [ref=f2e510]: cod
+              - generic [ref=f2e511]:
+                - paragraph [ref=f2e512]: Total Amount
+                - paragraph [ref=f2e513]: ₹1768.82
+              - generic [ref=f2e514]:
+                - paragraph [ref=f2e515]: COD Amount
+                - paragraph [ref=f2e516]: ₹1768.82
+            - generic [ref=f2e517]:
+              - paragraph [ref=f2e518]: Products
+              - generic [ref=f2e519]:
+                - paragraph [ref=f2e520]: Playwright Complete Detail Product
+                - paragraph [ref=f2e521]: "Qty: 1"
+            - generic [ref=f2e522]:
+              - paragraph [ref=f2e523]: Playwright Order Customer
+              - generic [ref=f2e524]:
+                - paragraph [ref=f2e525]: "9876543210"
+                - button [ref=f2e526]
+              - paragraph [ref=f2e530]: 123 Test Street
+              - paragraph [ref=f2e531]: Delhi - 110001
+              - paragraph [ref=f2e532]: Zone - A
+            - generic [ref=f2e533]:
+              - generic [ref=f2e534]:
+                - generic [ref=f2e535]:
+                  - paragraph [ref=f2e536]: Box Size (L × W × H)
+                  - generic [ref=f2e537]: "|"
+                  - button [ref=f2e538]
+                - paragraph [ref=f2e542]: 10x12x14
+              - generic [ref=f2e543]:
+                - paragraph [ref=f2e544]: Dead Weight
+                - paragraph [ref=f2e545]: 0.20 kg
+              - generic [ref=f2e546]:
+                - paragraph [ref=f2e547]: Volumetric Weight
+                - paragraph [ref=f2e548]: 0.34 kg
+            - generic [ref=f2e549]:
+              - generic [ref=f2e550]:
+                - generic [ref=f2e551]:
+                  - paragraph [ref=f2e552]: Order Status
+                  - generic [ref=f2e553]: New
+                - generic [ref=f2e554]:
+                  - paragraph [ref=f2e555]: Tracking (AWB)
+                  - paragraph [ref=f2e556]: NA
+              - generic [ref=f2e557]:
+                - generic [ref=f2e558]:
+                  - paragraph [ref=f2e559]: Courier Partner
+                  - paragraph [ref=f2e560]: —
+                - generic [ref=f2e561]:
+                  - paragraph [ref=f2e562]: Assigned On
+                  - paragraph [ref=f2e563]: NA
+            - generic [ref=f2e564]:
+              - button "Ship" [ref=f2e565]
+              - button "View Order" [ref=f2e566] [cursor=pointer]
+          - generic [ref=f2e568]:
+            - checkbox [ref=f2e570]
+            - generic [ref=f2e571]:
+              - generic [ref=f2e572]:
+                - paragraph [ref=f2e573]: Order Number
+                - generic [ref=f2e574]:
+                  - generic [ref=f2e575] [cursor=pointer]: PW-ORDER-1795000947084
+                  - button [ref=f2e576]
+              - generic [ref=f2e580]:
+                - paragraph [ref=f2e581]: Creation Date
+                - paragraph [ref=f2e582]: 18-11-2026 11:22 AM
+              - generic [ref=f2e583]:
+                - paragraph [ref=f2e584]: Channel
+                - generic [ref=f2e585]: Test11
+            - generic [ref=f2e587]:
+              - generic [ref=f2e588]: cod
+              - generic [ref=f2e589]:
+                - paragraph [ref=f2e590]: Total Amount
+                - paragraph [ref=f2e591]: ₹1768.82
+              - generic [ref=f2e592]:
+                - paragraph [ref=f2e593]: COD Amount
+                - paragraph [ref=f2e594]: ₹1768.82
+            - generic [ref=f2e595]:
+              - paragraph [ref=f2e596]: Products
+              - generic [ref=f2e597]:
+                - paragraph [ref=f2e598]: Playwright Complete Detail Product
+                - paragraph [ref=f2e599]: "Qty: 1"
+            - generic [ref=f2e600]:
+              - paragraph [ref=f2e601]: Playwright Order Customer
+              - generic [ref=f2e602]:
+                - paragraph [ref=f2e603]: "9876543210"
+                - button [ref=f2e604]
+              - paragraph [ref=f2e608]: 123 Test Street
+              - paragraph [ref=f2e609]: Delhi - 110001
+              - paragraph [ref=f2e610]: Zone - A
+            - generic [ref=f2e611]:
+              - generic [ref=f2e612]:
+                - generic [ref=f2e613]:
+                  - paragraph [ref=f2e614]: Box Size (L × W × H)
+                  - generic [ref=f2e615]: "|"
+                  - button [ref=f2e616]
+                - paragraph [ref=f2e620]: 10x12x14
+              - generic [ref=f2e621]:
+                - paragraph [ref=f2e622]: Dead Weight
+                - paragraph [ref=f2e623]: 0.20 kg
+              - generic [ref=f2e624]:
+                - paragraph [ref=f2e625]: Volumetric Weight
+                - paragraph [ref=f2e626]: 0.34 kg
+            - generic [ref=f2e627]:
+              - generic [ref=f2e628]:
+                - generic [ref=f2e629]:
+                  - paragraph [ref=f2e630]: Order Status
+                  - generic [ref=f2e631]: New
+                - generic [ref=f2e632]:
+                  - paragraph [ref=f2e633]: Tracking (AWB)
+                  - paragraph [ref=f2e634]: NA
+              - generic [ref=f2e635]:
+                - generic [ref=f2e636]:
+                  - paragraph [ref=f2e637]: Courier Partner
+                  - paragraph [ref=f2e638]: —
+                - generic [ref=f2e639]:
+                  - paragraph [ref=f2e640]: Assigned On
+                  - paragraph [ref=f2e641]: NA
+            - generic [ref=f2e642]:
+              - button "Ship" [ref=f2e643]
+              - button "View Order" [ref=f2e644] [cursor=pointer]
+          - generic [ref=f2e646]:
+            - checkbox [ref=f2e648]
+            - generic [ref=f2e649]:
+              - generic [ref=f2e650]:
+                - paragraph [ref=f2e651]: Order Number
+                - generic [ref=f2e652]:
+                  - generic [ref=f2e653] [cursor=pointer]: PW-ORDER-1795000870644
+                  - button [ref=f2e654]
+              - generic [ref=f2e658]:
+                - paragraph [ref=f2e659]: Creation Date
+                - paragraph [ref=f2e660]: 18-11-2026 11:21 AM
+              - generic [ref=f2e661]:
+                - paragraph [ref=f2e662]: Channel
+                - generic [ref=f2e663]: Test11
+            - generic [ref=f2e665]:
+              - generic [ref=f2e666]: cod
+              - generic [ref=f2e667]:
+                - paragraph [ref=f2e668]: Total Amount
+                - paragraph [ref=f2e669]: ₹1768.82
+              - generic [ref=f2e670]:
+                - paragraph [ref=f2e671]: COD Amount
+                - paragraph [ref=f2e672]: ₹1768.82
+            - generic [ref=f2e673]:
+              - paragraph [ref=f2e674]: Products
+              - generic [ref=f2e675]:
+                - paragraph [ref=f2e676]: Playwright Complete Detail Product
+                - paragraph [ref=f2e677]: "Qty: 1"
+            - generic [ref=f2e678]:
+              - paragraph [ref=f2e679]: Playwright Order Customer
+              - generic [ref=f2e680]:
+                - paragraph [ref=f2e681]: "9876543210"
+                - button [ref=f2e682]
+              - paragraph [ref=f2e686]: 123 Test Street
+              - paragraph [ref=f2e687]: Delhi - 110001
+              - paragraph [ref=f2e688]: Zone - A
+            - generic [ref=f2e689]:
+              - generic [ref=f2e690]:
+                - generic [ref=f2e691]:
+                  - paragraph [ref=f2e692]: Box Size (L × W × H)
+                  - generic [ref=f2e693]: "|"
+                  - button [ref=f2e694]
+                - paragraph [ref=f2e698]: 10x12x14
+              - generic [ref=f2e699]:
+                - paragraph [ref=f2e700]: Dead Weight
+                - paragraph [ref=f2e701]: 0.20 kg
+              - generic [ref=f2e702]:
+                - paragraph [ref=f2e703]: Volumetric Weight
+                - paragraph [ref=f2e704]: 0.34 kg
+            - generic [ref=f2e705]:
+              - generic [ref=f2e706]:
+                - generic [ref=f2e707]:
+                  - paragraph [ref=f2e708]: Order Status
+                  - generic [ref=f2e709]: New
+                - generic [ref=f2e710]:
+                  - paragraph [ref=f2e711]: Tracking (AWB)
+                  - paragraph [ref=f2e712]: NA
+              - generic [ref=f2e713]:
+                - generic [ref=f2e714]:
+                  - paragraph [ref=f2e715]: Courier Partner
+                  - paragraph [ref=f2e716]: —
+                - generic [ref=f2e717]:
+                  - paragraph [ref=f2e718]: Assigned On
+                  - paragraph [ref=f2e719]: NA
+            - generic [ref=f2e720]:
+              - button "Ship" [ref=f2e721]
+              - button "View Order" [ref=f2e722] [cursor=pointer]
+          - generic [ref=f2e724]:
+            - checkbox [ref=f2e726]
+            - generic [ref=f2e727]:
+              - generic [ref=f2e728]:
+                - paragraph [ref=f2e729]: Order Number
+                - generic [ref=f2e730]:
+                  - generic [ref=f2e731] [cursor=pointer]: PW-ORDER-1795000829976
+                  - button [ref=f2e732]
+              - generic [ref=f2e736]:
+                - paragraph [ref=f2e737]: Creation Date
+                - paragraph [ref=f2e738]: 18-11-2026 11:20 AM
+              - generic [ref=f2e739]:
+                - paragraph [ref=f2e740]: Channel
+                - generic [ref=f2e741]: Test11
+            - generic [ref=f2e743]:
+              - generic [ref=f2e744]: cod
+              - generic [ref=f2e745]:
+                - paragraph [ref=f2e746]: Total Amount
+                - paragraph [ref=f2e747]: ₹1768.82
+              - generic [ref=f2e748]:
+                - paragraph [ref=f2e749]: COD Amount
+                - paragraph [ref=f2e750]: ₹1768.82
+            - generic [ref=f2e751]:
+              - paragraph [ref=f2e752]: Products
+              - generic [ref=f2e753]:
+                - paragraph [ref=f2e754]: Playwright Complete Detail Product
+                - paragraph [ref=f2e755]: "Qty: 1"
+            - generic [ref=f2e756]:
+              - paragraph [ref=f2e757]: Playwright Order Customer
+              - generic [ref=f2e758]:
+                - paragraph [ref=f2e759]: "9876543210"
+                - button [ref=f2e760]
+              - paragraph [ref=f2e764]: 123 Test Street
+              - paragraph [ref=f2e765]: Delhi - 110001
+              - paragraph [ref=f2e766]: Zone - A
+            - generic [ref=f2e767]:
+              - generic [ref=f2e768]:
+                - generic [ref=f2e769]:
+                  - paragraph [ref=f2e770]: Box Size (L × W × H)
+                  - generic [ref=f2e771]: "|"
+                  - button [ref=f2e772]
+                - paragraph [ref=f2e776]: 10x12x14
+              - generic [ref=f2e777]:
+                - paragraph [ref=f2e778]: Dead Weight
+                - paragraph [ref=f2e779]: 0.20 kg
+              - generic [ref=f2e780]:
+                - paragraph [ref=f2e781]: Volumetric Weight
+                - paragraph [ref=f2e782]: 0.34 kg
+            - generic [ref=f2e783]:
+              - generic [ref=f2e784]:
+                - generic [ref=f2e785]:
+                  - paragraph [ref=f2e786]: Order Status
+                  - generic [ref=f2e787]: New
+                - generic [ref=f2e788]:
+                  - paragraph [ref=f2e789]: Tracking (AWB)
+                  - paragraph [ref=f2e790]: NA
+              - generic [ref=f2e791]:
+                - generic [ref=f2e792]:
+                  - paragraph [ref=f2e793]: Courier Partner
+                  - paragraph [ref=f2e794]: —
+                - generic [ref=f2e795]:
+                  - paragraph [ref=f2e796]: Assigned On
+                  - paragraph [ref=f2e797]: NA
+            - generic [ref=f2e798]:
+              - button "Ship" [ref=f2e799]
+              - button "View Order" [ref=f2e800] [cursor=pointer]
+          - generic [ref=f2e802]:
+            - checkbox [ref=f2e804]
+            - generic [ref=f2e805]:
+              - generic [ref=f2e806]:
+                - paragraph [ref=f2e807]: Order Number
+                - generic [ref=f2e808]:
+                  - generic [ref=f2e809] [cursor=pointer]: PW-ORDER-1795000769295
+                  - button [ref=f2e810]
+              - generic [ref=f2e814]:
+                - paragraph [ref=f2e815]: Creation Date
+                - paragraph [ref=f2e816]: 18-11-2026 11:19 AM
+              - generic [ref=f2e817]:
+                - paragraph [ref=f2e818]: Channel
+                - generic [ref=f2e819]: Test11
+            - generic [ref=f2e821]:
+              - generic [ref=f2e822]: cod
+              - generic [ref=f2e823]:
+                - paragraph [ref=f2e824]: Total Amount
+                - paragraph [ref=f2e825]: ₹1768.82
+              - generic [ref=f2e826]:
+                - paragraph [ref=f2e827]: COD Amount
+                - paragraph [ref=f2e828]: ₹1768.82
+            - generic [ref=f2e829]:
+              - paragraph [ref=f2e830]: Products
+              - generic [ref=f2e831]:
+                - paragraph [ref=f2e832]: Playwright Complete Detail Product
+                - paragraph [ref=f2e833]: "Qty: 1"
+            - generic [ref=f2e834]:
+              - paragraph [ref=f2e835]: Playwright Order Customer
+              - generic [ref=f2e836]:
+                - paragraph [ref=f2e837]: "9876543210"
+                - button [ref=f2e838]
+              - paragraph [ref=f2e842]: 123 Test Street
+              - paragraph [ref=f2e843]: Delhi - 110001
+              - paragraph [ref=f2e844]: Zone - A
+            - generic [ref=f2e845]:
+              - generic [ref=f2e846]:
+                - generic [ref=f2e847]:
+                  - paragraph [ref=f2e848]: Box Size (L × W × H)
+                  - generic [ref=f2e849]: "|"
+                  - button [ref=f2e850]
+                - paragraph [ref=f2e854]: 10x12x14
+              - generic [ref=f2e855]:
+                - paragraph [ref=f2e856]: Dead Weight
+                - paragraph [ref=f2e857]: 0.20 kg
+              - generic [ref=f2e858]:
+                - paragraph [ref=f2e859]: Volumetric Weight
+                - paragraph [ref=f2e860]: 0.34 kg
+            - generic [ref=f2e861]:
+              - generic [ref=f2e862]:
+                - generic [ref=f2e863]:
+                  - paragraph [ref=f2e864]: Order Status
+                  - generic [ref=f2e865]: New
+                - generic [ref=f2e866]:
+                  - paragraph [ref=f2e867]: Tracking (AWB)
+                  - paragraph [ref=f2e868]: NA
+              - generic [ref=f2e869]:
+                - generic [ref=f2e870]:
+                  - paragraph [ref=f2e871]: Courier Partner
+                  - paragraph [ref=f2e872]: —
+                - generic [ref=f2e873]:
+                  - paragraph [ref=f2e874]: Assigned On
+                  - paragraph [ref=f2e875]: NA
+            - generic [ref=f2e876]:
+              - button "Ship" [ref=f2e877]
+              - button "View Order" [ref=f2e878] [cursor=pointer]
+          - generic [ref=f2e880]:
+            - checkbox [ref=f2e882]
+            - generic [ref=f2e883]:
+              - generic [ref=f2e884]:
+                - paragraph [ref=f2e885]: Order Number
+                - generic [ref=f2e886]:
+                  - generic [ref=f2e887] [cursor=pointer]: PW-ORDER-1795000684322
+                  - button [ref=f2e888]
+              - generic [ref=f2e892]:
+                - paragraph [ref=f2e893]: Creation Date
+                - paragraph [ref=f2e894]: 18-11-2026 11:18 AM
+              - generic [ref=f2e895]:
+                - paragraph [ref=f2e896]: Channel
+                - generic [ref=f2e897]: Test11
+            - generic [ref=f2e899]:
+              - generic [ref=f2e900]: cod
+              - generic [ref=f2e901]:
+                - paragraph [ref=f2e902]: Total Amount
+                - paragraph [ref=f2e903]: ₹1768.82
+              - generic [ref=f2e904]:
+                - paragraph [ref=f2e905]: COD Amount
+                - paragraph [ref=f2e906]: ₹1768.82
+            - generic [ref=f2e907]:
+              - paragraph [ref=f2e908]: Products
+              - generic [ref=f2e909]:
+                - paragraph [ref=f2e910]: Playwright Complete Detail Product
+                - paragraph [ref=f2e911]: "Qty: 1"
+            - generic [ref=f2e912]:
+              - paragraph [ref=f2e913]: Playwright Order Customer
+              - generic [ref=f2e914]:
+                - paragraph [ref=f2e915]: "9876543210"
+                - button [ref=f2e916]
+              - paragraph [ref=f2e920]: 123 Test Street
+              - paragraph [ref=f2e921]: Delhi - 110001
+              - paragraph [ref=f2e922]: Zone - A
+            - generic [ref=f2e923]:
+              - generic [ref=f2e924]:
+                - generic [ref=f2e925]:
+                  - paragraph [ref=f2e926]: Box Size (L × W × H)
+                  - generic [ref=f2e927]: "|"
+                  - button [ref=f2e928]
+                - paragraph [ref=f2e932]: 10x12x14
+              - generic [ref=f2e933]:
+                - paragraph [ref=f2e934]: Dead Weight
+                - paragraph [ref=f2e935]: 0.20 kg
+              - generic [ref=f2e936]:
+                - paragraph [ref=f2e937]: Volumetric Weight
+                - paragraph [ref=f2e938]: 0.34 kg
+            - generic [ref=f2e939]:
+              - generic [ref=f2e940]:
+                - generic [ref=f2e941]:
+                  - paragraph [ref=f2e942]: Order Status
+                  - generic [ref=f2e943]: New
+                - generic [ref=f2e944]:
+                  - paragraph [ref=f2e945]: Tracking (AWB)
+                  - paragraph [ref=f2e946]: NA
+              - generic [ref=f2e947]:
+                - generic [ref=f2e948]:
+                  - paragraph [ref=f2e949]: Courier Partner
+                  - paragraph [ref=f2e950]: —
+                - generic [ref=f2e951]:
+                  - paragraph [ref=f2e952]: Assigned On
+                  - paragraph [ref=f2e953]: NA
+            - generic [ref=f2e954]:
+              - button "Ship" [ref=f2e955]
+              - button "View Order" [ref=f2e956] [cursor=pointer]
+          - generic [ref=f2e958]:
+            - checkbox [ref=f2e960]
+            - generic [ref=f2e961]:
+              - generic [ref=f2e962]:
+                - paragraph [ref=f2e963]: Order Number
+                - generic [ref=f2e964]:
+                  - generic [ref=f2e965] [cursor=pointer]: PW-ORDER-1795000618342
+                  - button [ref=f2e966]
+              - generic [ref=f2e970]:
+                - paragraph [ref=f2e971]: Creation Date
+                - paragraph [ref=f2e972]: 18-11-2026 11:17 AM
+              - generic [ref=f2e973]:
+                - paragraph [ref=f2e974]: Channel
+                - generic [ref=f2e975]: Test11
+            - generic [ref=f2e977]:
+              - generic [ref=f2e978]: cod
+              - generic [ref=f2e979]:
+                - paragraph [ref=f2e980]: Total Amount
+                - paragraph [ref=f2e981]: ₹1768.82
+              - generic [ref=f2e982]:
+                - paragraph [ref=f2e983]: COD Amount
+                - paragraph [ref=f2e984]: ₹1768.82
+            - generic [ref=f2e985]:
+              - paragraph [ref=f2e986]: Products
+              - generic [ref=f2e987]:
+                - paragraph [ref=f2e988]: Playwright Complete Detail Product
+                - paragraph [ref=f2e989]: "Qty: 1"
+            - generic [ref=f2e990]:
+              - paragraph [ref=f2e991]: Playwright Order Customer
+              - generic [ref=f2e992]:
+                - paragraph [ref=f2e993]: "9876543210"
+                - button [ref=f2e994]
+              - paragraph [ref=f2e998]: 123 Test Street
+              - paragraph [ref=f2e999]: Delhi - 110001
+              - paragraph [ref=f2e1000]: Zone - A
+            - generic [ref=f2e1001]:
+              - generic [ref=f2e1002]:
+                - generic [ref=f2e1003]:
+                  - paragraph [ref=f2e1004]: Box Size (L × W × H)
+                  - generic [ref=f2e1005]: "|"
+                  - button [ref=f2e1006]
+                - paragraph [ref=f2e1010]: 10x12x14
+              - generic [ref=f2e1011]:
+                - paragraph [ref=f2e1012]: Dead Weight
+                - paragraph [ref=f2e1013]: 0.20 kg
+              - generic [ref=f2e1014]:
+                - paragraph [ref=f2e1015]: Volumetric Weight
+                - paragraph [ref=f2e1016]: 0.34 kg
+            - generic [ref=f2e1017]:
+              - generic [ref=f2e1018]:
+                - generic [ref=f2e1019]:
+                  - paragraph [ref=f2e1020]: Order Status
+                  - generic [ref=f2e1021]: New
+                - generic [ref=f2e1022]:
+                  - paragraph [ref=f2e1023]: Tracking (AWB)
+                  - paragraph [ref=f2e1024]: NA
+              - generic [ref=f2e1025]:
+                - generic [ref=f2e1026]:
+                  - paragraph [ref=f2e1027]: Courier Partner
+                  - paragraph [ref=f2e1028]: —
+                - generic [ref=f2e1029]:
+                  - paragraph [ref=f2e1030]: Assigned On
+                  - paragraph [ref=f2e1031]: NA
+            - generic [ref=f2e1032]:
+              - button "Ship" [ref=f2e1033]
+              - button "View Order" [ref=f2e1034] [cursor=pointer]
+          - generic [ref=f2e1036]:
+            - checkbox [ref=f2e1038]
+            - generic [ref=f2e1039]:
+              - generic [ref=f2e1040]:
+                - paragraph [ref=f2e1041]: Order Number
+                - generic [ref=f2e1042]:
+                  - generic [ref=f2e1043] [cursor=pointer]: PW-ORDER-1795000554546
+                  - button [ref=f2e1044]
+              - generic [ref=f2e1048]:
+                - paragraph [ref=f2e1049]: Creation Date
+                - paragraph [ref=f2e1050]: 18-11-2026 11:16 AM
+              - generic [ref=f2e1051]:
+                - paragraph [ref=f2e1052]: Channel
+                - generic [ref=f2e1053]: Test11
+            - generic [ref=f2e1055]:
+              - generic [ref=f2e1056]: cod
+              - generic [ref=f2e1057]:
+                - paragraph [ref=f2e1058]: Total Amount
+                - paragraph [ref=f2e1059]: ₹1768.82
+              - generic [ref=f2e1060]:
+                - paragraph [ref=f2e1061]: COD Amount
+                - paragraph [ref=f2e1062]: ₹1768.82
+            - generic [ref=f2e1063]:
+              - paragraph [ref=f2e1064]: Products
+              - generic [ref=f2e1065]:
+                - paragraph [ref=f2e1066]: Playwright Complete Detail Product
+                - paragraph [ref=f2e1067]: "Qty: 1"
+            - generic [ref=f2e1068]:
+              - paragraph [ref=f2e1069]: Playwright Order Customer
+              - generic [ref=f2e1070]:
+                - paragraph [ref=f2e1071]: "9876543210"
+                - button [ref=f2e1072]
+              - paragraph [ref=f2e1076]: 123 Test Street
+              - paragraph [ref=f2e1077]: Delhi - 110001
+              - paragraph [ref=f2e1078]: Zone - A
+            - generic [ref=f2e1079]:
+              - generic [ref=f2e1080]:
+                - generic [ref=f2e1081]:
+                  - paragraph [ref=f2e1082]: Box Size (L × W × H)
+                  - generic [ref=f2e1083]: "|"
+                  - button [ref=f2e1084]
+                - paragraph [ref=f2e1088]: 10x12x14
+              - generic [ref=f2e1089]:
+                - paragraph [ref=f2e1090]: Dead Weight
+                - paragraph [ref=f2e1091]: 0.20 kg
+              - generic [ref=f2e1092]:
+                - paragraph [ref=f2e1093]: Volumetric Weight
+                - paragraph [ref=f2e1094]: 0.34 kg
+            - generic [ref=f2e1095]:
+              - generic [ref=f2e1096]:
+                - generic [ref=f2e1097]:
+                  - paragraph [ref=f2e1098]: Order Status
+                  - generic [ref=f2e1099]: New
+                - generic [ref=f2e1100]:
+                  - paragraph [ref=f2e1101]: Tracking (AWB)
+                  - paragraph [ref=f2e1102]: NA
+              - generic [ref=f2e1103]:
+                - generic [ref=f2e1104]:
+                  - paragraph [ref=f2e1105]: Courier Partner
+                  - paragraph [ref=f2e1106]: —
+                - generic [ref=f2e1107]:
+                  - paragraph [ref=f2e1108]: Assigned On
+                  - paragraph [ref=f2e1109]: NA
+            - generic [ref=f2e1110]:
+              - button "Ship" [ref=f2e1111]
+              - button "View Order" [ref=f2e1112] [cursor=pointer]
+          - generic [ref=f2e1114]:
+            - checkbox [ref=f2e1116]
+            - generic [ref=f2e1117]:
+              - generic [ref=f2e1118]:
+                - paragraph [ref=f2e1119]: Order Number
+                - generic [ref=f2e1120]:
+                  - generic [ref=f2e1121] [cursor=pointer]: PW-ORDER-1795000509293
+                  - button [ref=f2e1122]
+              - generic [ref=f2e1126]:
+                - paragraph [ref=f2e1127]: Creation Date
+                - paragraph [ref=f2e1128]: 18-11-2026 11:15 AM
+              - generic [ref=f2e1129]:
+                - paragraph [ref=f2e1130]: Channel
+                - generic [ref=f2e1131]: Test11
+            - generic [ref=f2e1133]:
+              - generic [ref=f2e1134]: cod
+              - generic [ref=f2e1135]:
+                - paragraph [ref=f2e1136]: Total Amount
+                - paragraph [ref=f2e1137]: ₹1768.82
+              - generic [ref=f2e1138]:
+                - paragraph [ref=f2e1139]: COD Amount
+                - paragraph [ref=f2e1140]: ₹1768.82
+            - generic [ref=f2e1141]:
+              - paragraph [ref=f2e1142]: Products
+              - generic [ref=f2e1143]:
+                - paragraph [ref=f2e1144]: Playwright Complete Detail Product
+                - paragraph [ref=f2e1145]: "Qty: 1"
+            - generic [ref=f2e1146]:
+              - paragraph [ref=f2e1147]: Playwright Order Customer
+              - generic [ref=f2e1148]:
+                - paragraph [ref=f2e1149]: "9876543210"
+                - button [ref=f2e1150]
+              - paragraph [ref=f2e1154]: 123 Test Street
+              - paragraph [ref=f2e1155]: Delhi - 110001
+              - paragraph [ref=f2e1156]: Zone - A
+            - generic [ref=f2e1157]:
+              - generic [ref=f2e1158]:
+                - generic [ref=f2e1159]:
+                  - paragraph [ref=f2e1160]: Box Size (L × W × H)
+                  - generic [ref=f2e1161]: "|"
+                  - button [ref=f2e1162]
+                - paragraph [ref=f2e1166]: 10x12x14
+              - generic [ref=f2e1167]:
+                - paragraph [ref=f2e1168]: Dead Weight
+                - paragraph [ref=f2e1169]: 0.20 kg
+              - generic [ref=f2e1170]:
+                - paragraph [ref=f2e1171]: Volumetric Weight
+                - paragraph [ref=f2e1172]: 0.34 kg
+            - generic [ref=f2e1173]:
+              - generic [ref=f2e1174]:
+                - generic [ref=f2e1175]:
+                  - paragraph [ref=f2e1176]: Order Status
+                  - generic [ref=f2e1177]: New
+                - generic [ref=f2e1178]:
+                  - paragraph [ref=f2e1179]: Tracking (AWB)
+                  - paragraph [ref=f2e1180]: NA
+              - generic [ref=f2e1181]:
+                - generic [ref=f2e1182]:
+                  - paragraph [ref=f2e1183]: Courier Partner
+                  - paragraph [ref=f2e1184]: —
+                - generic [ref=f2e1185]:
+                  - paragraph [ref=f2e1186]: Assigned On
+                  - paragraph [ref=f2e1187]: NA
+            - generic [ref=f2e1188]:
+              - button "Ship" [ref=f2e1189]
+              - button "View Order" [ref=f2e1190] [cursor=pointer]
+          - generic [ref=f2e1192]:
+            - checkbox [ref=f2e1194]
+            - generic [ref=f2e1195]:
+              - generic [ref=f2e1196]:
+                - paragraph [ref=f2e1197]: Order Number
+                - generic [ref=f2e1198]:
+                  - generic [ref=f2e1199] [cursor=pointer]: PW-ORDER-1795000457298
+                  - button [ref=f2e1200]
+              - generic [ref=f2e1204]:
+                - paragraph [ref=f2e1205]: Creation Date
+                - paragraph [ref=f2e1206]: 18-11-2026 11:14 AM
+              - generic [ref=f2e1207]:
+                - paragraph [ref=f2e1208]: Channel
+                - generic [ref=f2e1209]: Test11
+            - generic [ref=f2e1211]:
+              - generic [ref=f2e1212]: cod
+              - generic [ref=f2e1213]:
+                - paragraph [ref=f2e1214]: Total Amount
+                - paragraph [ref=f2e1215]: ₹1768.82
+              - generic [ref=f2e1216]:
+                - paragraph [ref=f2e1217]: COD Amount
+                - paragraph [ref=f2e1218]: ₹1768.82
+            - generic [ref=f2e1219]:
+              - paragraph [ref=f2e1220]: Products
+              - generic [ref=f2e1221]:
+                - paragraph [ref=f2e1222]: Playwright Complete Detail Product
+                - paragraph [ref=f2e1223]: "Qty: 1"
+            - generic [ref=f2e1224]:
+              - paragraph [ref=f2e1225]: Playwright Order Customer
+              - generic [ref=f2e1226]:
+                - paragraph [ref=f2e1227]: "9876543210"
+                - button [ref=f2e1228]
+              - paragraph [ref=f2e1232]: 123 Test Street
+              - paragraph [ref=f2e1233]: Delhi - 110001
+              - paragraph [ref=f2e1234]: Zone - A
+            - generic [ref=f2e1235]:
+              - generic [ref=f2e1236]:
+                - generic [ref=f2e1237]:
+                  - paragraph [ref=f2e1238]: Box Size (L × W × H)
+                  - generic [ref=f2e1239]: "|"
+                  - button [ref=f2e1240]
+                - paragraph [ref=f2e1244]: 10x12x14
+              - generic [ref=f2e1245]:
+                - paragraph [ref=f2e1246]: Dead Weight
+                - paragraph [ref=f2e1247]: 0.20 kg
+              - generic [ref=f2e1248]:
+                - paragraph [ref=f2e1249]: Volumetric Weight
+                - paragraph [ref=f2e1250]: 0.34 kg
+            - generic [ref=f2e1251]:
+              - generic [ref=f2e1252]:
+                - generic [ref=f2e1253]:
+                  - paragraph [ref=f2e1254]: Order Status
+                  - generic [ref=f2e1255]: New
+                - generic [ref=f2e1256]:
+                  - paragraph [ref=f2e1257]: Tracking (AWB)
+                  - paragraph [ref=f2e1258]: NA
+              - generic [ref=f2e1259]:
+                - generic [ref=f2e1260]:
+                  - paragraph [ref=f2e1261]: Courier Partner
+                  - paragraph [ref=f2e1262]: —
+                - generic [ref=f2e1263]:
+                  - paragraph [ref=f2e1264]: Assigned On
+                  - paragraph [ref=f2e1265]: NA
+            - generic [ref=f2e1266]:
+              - button "Ship" [ref=f2e1267]
+              - button "View Order" [ref=f2e1268] [cursor=pointer]
+          - generic [ref=f2e1270]:
+            - checkbox [ref=f2e1272]
+            - generic [ref=f2e1273]:
+              - generic [ref=f2e1274]:
+                - paragraph [ref=f2e1275]: Order Number
+                - generic [ref=f2e1276]:
+                  - generic [ref=f2e1277] [cursor=pointer]: PW-ORDER-1795000388946
+                  - button [ref=f2e1278]
+              - generic [ref=f2e1282]:
+                - paragraph [ref=f2e1283]: Creation Date
+                - paragraph [ref=f2e1284]: 18-11-2026 11:13 AM
+              - generic [ref=f2e1285]:
+                - paragraph [ref=f2e1286]: Channel
+                - generic [ref=f2e1287]: Test11
+            - generic [ref=f2e1289]:
+              - generic [ref=f2e1290]: cod
+              - generic [ref=f2e1291]:
+                - paragraph [ref=f2e1292]: Total Amount
+                - paragraph [ref=f2e1293]: ₹1768.82
+              - generic [ref=f2e1294]:
+                - paragraph [ref=f2e1295]: COD Amount
+                - paragraph [ref=f2e1296]: ₹1768.82
+            - generic [ref=f2e1297]:
+              - paragraph [ref=f2e1298]: Products
+              - generic [ref=f2e1299]:
+                - paragraph [ref=f2e1300]: Playwright Complete Detail Product
+                - paragraph [ref=f2e1301]: "Qty: 1"
+            - generic [ref=f2e1302]:
+              - paragraph [ref=f2e1303]: Playwright Order Customer
+              - generic [ref=f2e1304]:
+                - paragraph [ref=f2e1305]: "9876543210"
+                - button [ref=f2e1306]
+              - paragraph [ref=f2e1310]: 123 Test Street
+              - paragraph [ref=f2e1311]: Delhi - 110001
+              - paragraph [ref=f2e1312]: Zone - A
+            - generic [ref=f2e1313]:
+              - generic [ref=f2e1314]:
+                - generic [ref=f2e1315]:
+                  - paragraph [ref=f2e1316]: Box Size (L × W × H)
+                  - generic [ref=f2e1317]: "|"
+                  - button [ref=f2e1318]
+                - paragraph [ref=f2e1322]: 10x12x14
+              - generic [ref=f2e1323]:
+                - paragraph [ref=f2e1324]: Dead Weight
+                - paragraph [ref=f2e1325]: 0.20 kg
+              - generic [ref=f2e1326]:
+                - paragraph [ref=f2e1327]: Volumetric Weight
+                - paragraph [ref=f2e1328]: 0.34 kg
+            - generic [ref=f2e1329]:
+              - generic [ref=f2e1330]:
+                - generic [ref=f2e1331]:
+                  - paragraph [ref=f2e1332]: Order Status
+                  - generic [ref=f2e1333]: New
+                - generic [ref=f2e1334]:
+                  - paragraph [ref=f2e1335]: Tracking (AWB)
+                  - paragraph [ref=f2e1336]: NA
+              - generic [ref=f2e1337]:
+                - generic [ref=f2e1338]:
+                  - paragraph [ref=f2e1339]: Courier Partner
+                  - paragraph [ref=f2e1340]: —
+                - generic [ref=f2e1341]:
+                  - paragraph [ref=f2e1342]: Assigned On
+                  - paragraph [ref=f2e1343]: NA
+            - generic [ref=f2e1344]:
+              - button "Ship" [ref=f2e1345]
+              - button "View Order" [ref=f2e1346] [cursor=pointer]
+          - generic [ref=f2e1348]:
+            - checkbox [ref=f2e1350]
+            - generic [ref=f2e1351]:
+              - generic [ref=f2e1352]:
+                - paragraph [ref=f2e1353]: Order Number
+                - generic [ref=f2e1354]:
+                  - generic [ref=f2e1355] [cursor=pointer]: PW-ORDER-1795000320413
+                  - button [ref=f2e1356]
+              - generic [ref=f2e1360]:
+                - paragraph [ref=f2e1361]: Creation Date
+                - paragraph [ref=f2e1362]: 18-11-2026 11:12 AM
+              - generic [ref=f2e1363]:
+                - paragraph [ref=f2e1364]: Channel
+                - generic [ref=f2e1365]: Test11
+            - generic [ref=f2e1367]:
+              - generic [ref=f2e1368]: cod
+              - generic [ref=f2e1369]:
+                - paragraph [ref=f2e1370]: Total Amount
+                - paragraph [ref=f2e1371]: ₹1768.82
+              - generic [ref=f2e1372]:
+                - paragraph [ref=f2e1373]: COD Amount
+                - paragraph [ref=f2e1374]: ₹1768.82
+            - generic [ref=f2e1375]:
+              - paragraph [ref=f2e1376]: Products
+              - generic [ref=f2e1377]:
+                - paragraph [ref=f2e1378]: Playwright Complete Detail Product
+                - paragraph [ref=f2e1379]: "Qty: 1"
+            - generic [ref=f2e1380]:
+              - paragraph [ref=f2e1381]: Playwright Order Customer
+              - generic [ref=f2e1382]:
+                - paragraph [ref=f2e1383]: "9876543210"
+                - button [ref=f2e1384]
+              - paragraph [ref=f2e1388]: 123 Test Street
+              - paragraph [ref=f2e1389]: Delhi - 110001
+              - paragraph [ref=f2e1390]: Zone - A
+            - generic [ref=f2e1391]:
+              - generic [ref=f2e1392]:
+                - generic [ref=f2e1393]:
+                  - paragraph [ref=f2e1394]: Box Size (L × W × H)
+                  - generic [ref=f2e1395]: "|"
+                  - button [ref=f2e1396]
+                - paragraph [ref=f2e1400]: 10x12x14
+              - generic [ref=f2e1401]:
+                - paragraph [ref=f2e1402]: Dead Weight
+                - paragraph [ref=f2e1403]: 0.20 kg
+              - generic [ref=f2e1404]:
+                - paragraph [ref=f2e1405]: Volumetric Weight
+                - paragraph [ref=f2e1406]: 0.34 kg
+            - generic [ref=f2e1407]:
+              - generic [ref=f2e1408]:
+                - generic [ref=f2e1409]:
+                  - paragraph [ref=f2e1410]: Order Status
+                  - generic [ref=f2e1411]: New
+                - generic [ref=f2e1412]:
+                  - paragraph [ref=f2e1413]: Tracking (AWB)
+                  - paragraph [ref=f2e1414]: NA
+              - generic [ref=f2e1415]:
+                - generic [ref=f2e1416]:
+                  - paragraph [ref=f2e1417]: Courier Partner
+                  - paragraph [ref=f2e1418]: —
+                - generic [ref=f2e1419]:
+                  - paragraph [ref=f2e1420]: Assigned On
+                  - paragraph [ref=f2e1421]: NA
+            - generic [ref=f2e1422]:
+              - button "Ship" [ref=f2e1423]
+              - button "View Order" [ref=f2e1424] [cursor=pointer]
+          - generic [ref=f2e1426]:
+            - checkbox [ref=f2e1428]
+            - generic [ref=f2e1429]:
+              - generic [ref=f2e1430]:
+                - paragraph [ref=f2e1431]: Order Number
+                - generic [ref=f2e1432]:
+                  - generic [ref=f2e1433] [cursor=pointer]: PW-ORDER-1794932450634
+                  - button [ref=f2e1434]
+              - generic [ref=f2e1438]:
+                - paragraph [ref=f2e1439]: Creation Date
+                - paragraph [ref=f2e1440]: 17-11-2026 04:21 PM
+              - generic [ref=f2e1441]:
+                - paragraph [ref=f2e1442]: Channel
+                - generic [ref=f2e1443]: Test11
+            - generic [ref=f2e1445]:
+              - generic [ref=f2e1446]: cod
+              - generic [ref=f2e1447]:
+                - paragraph [ref=f2e1448]: Total Amount
+                - paragraph [ref=f2e1449]: ₹59.00
+              - generic [ref=f2e1450]:
+                - paragraph [ref=f2e1451]: COD Amount
+                - paragraph [ref=f2e1452]: ₹59.00
+            - generic [ref=f2e1453]:
+              - paragraph [ref=f2e1454]: Products
+              - generic [ref=f2e1455]:
+                - paragraph [ref=f2e1456]: polo
+                - paragraph [ref=f2e1457]: "Qty: 1"
+            - generic [ref=f2e1458]:
+              - paragraph [ref=f2e1459]: Playwright Order Customer
+              - generic [ref=f2e1460]:
+                - paragraph [ref=f2e1461]: "9876543210"
+                - button [ref=f2e1462]
+              - paragraph [ref=f2e1466]: 123 Test Street
+              - paragraph [ref=f2e1467]: Delhi - 110001
+              - paragraph [ref=f2e1468]: Zone - A
+            - generic [ref=f2e1469]:
+              - generic [ref=f2e1470]:
+                - generic [ref=f2e1471]:
+                  - paragraph [ref=f2e1472]: Box Size (L × W × H)
+                  - generic [ref=f2e1473]: "|"
+                  - button [ref=f2e1474]
+                - paragraph [ref=f2e1478]: 10x12x14
+              - generic [ref=f2e1479]:
+                - paragraph [ref=f2e1480]: Dead Weight
+                - paragraph [ref=f2e1481]: 0.20 kg
+              - generic [ref=f2e1482]:
+                - paragraph [ref=f2e1483]: Volumetric Weight
+                - paragraph [ref=f2e1484]: 0.34 kg
+            - generic [ref=f2e1485]:
+              - generic [ref=f2e1486]:
+                - generic [ref=f2e1487]:
+                  - paragraph [ref=f2e1488]: Order Status
+                  - generic [ref=f2e1489]: New
+                - generic [ref=f2e1490]:
+                  - paragraph [ref=f2e1491]: Tracking (AWB)
+                  - paragraph [ref=f2e1492]: NA
+              - generic [ref=f2e1493]:
+                - generic [ref=f2e1494]:
+                  - paragraph [ref=f2e1495]: Courier Partner
+                  - paragraph [ref=f2e1496]: —
+                - generic [ref=f2e1497]:
+                  - paragraph [ref=f2e1498]: Assigned On
+                  - paragraph [ref=f2e1499]: NA
+            - generic [ref=f2e1500]:
+              - button "Ship" [ref=f2e1501]
+              - button "View Order" [ref=f2e1502] [cursor=pointer]
+          - generic [ref=f2e1504]:
+            - checkbox [ref=f2e1506]
+            - generic [ref=f2e1507]:
+              - generic [ref=f2e1508]:
+                - paragraph [ref=f2e1509]: Order Number
+                - generic [ref=f2e1510]:
+                  - generic [ref=f2e1511] [cursor=pointer]: PW-ORDER-1794932305262
+                  - button [ref=f2e1512]
+              - generic [ref=f2e1516]:
+                - paragraph [ref=f2e1517]: Creation Date
+                - paragraph [ref=f2e1518]: 17-11-2026 04:19 PM
+              - generic [ref=f2e1519]:
+                - paragraph [ref=f2e1520]: Channel
+                - generic [ref=f2e1521]: Test11
+            - generic [ref=f2e1523]:
+              - generic [ref=f2e1524]: cod
+              - generic [ref=f2e1525]:
+                - paragraph [ref=f2e1526]: Total Amount
+                - paragraph [ref=f2e1527]: ₹1768.82
+              - generic [ref=f2e1528]:
+                - paragraph [ref=f2e1529]: COD Amount
+                - paragraph [ref=f2e1530]: ₹1768.82
+            - generic [ref=f2e1531]:
+              - paragraph [ref=f2e1532]: Products
+              - generic [ref=f2e1533]:
+                - paragraph [ref=f2e1534]: Playwright Complete Detail Product
+                - paragraph [ref=f2e1535]: "Qty: 1"
+            - generic [ref=f2e1536]:
+              - paragraph [ref=f2e1537]: Playwright Order Customer
+              - generic [ref=f2e1538]:
+                - paragraph [ref=f2e1539]: "9876543210"
+                - button [ref=f2e1540]
+              - paragraph [ref=f2e1544]: 123 Test Street
+              - paragraph [ref=f2e1545]: Delhi - 110001
+              - paragraph [ref=f2e1546]: Zone - A
+            - generic [ref=f2e1547]:
+              - generic [ref=f2e1548]:
+                - generic [ref=f2e1549]:
+                  - paragraph [ref=f2e1550]: Box Size (L × W × H)
+                  - generic [ref=f2e1551]: "|"
+                  - button [ref=f2e1552]
+                - paragraph [ref=f2e1556]: 10x12x14
+              - generic [ref=f2e1557]:
+                - paragraph [ref=f2e1558]: Dead Weight
+                - paragraph [ref=f2e1559]: 0.20 kg
+              - generic [ref=f2e1560]:
+                - paragraph [ref=f2e1561]: Volumetric Weight
+                - paragraph [ref=f2e1562]: 0.34 kg
+            - generic [ref=f2e1563]:
+              - generic [ref=f2e1564]:
+                - generic [ref=f2e1565]:
+                  - paragraph [ref=f2e1566]: Order Status
+                  - generic [ref=f2e1567]: New
+                - generic [ref=f2e1568]:
+                  - paragraph [ref=f2e1569]: Tracking (AWB)
+                  - paragraph [ref=f2e1570]: NA
+              - generic [ref=f2e1571]:
+                - generic [ref=f2e1572]:
+                  - paragraph [ref=f2e1573]: Courier Partner
+                  - paragraph [ref=f2e1574]: —
+                - generic [ref=f2e1575]:
+                  - paragraph [ref=f2e1576]: Assigned On
+                  - paragraph [ref=f2e1577]: NA
+            - generic [ref=f2e1578]:
+              - button "Ship" [ref=f2e1579]
+              - button "View Order" [ref=f2e1580] [cursor=pointer]
+          - generic [ref=f2e1582]:
+            - checkbox [ref=f2e1584]
+            - generic [ref=f2e1585]:
+              - generic [ref=f2e1586]:
+                - paragraph [ref=f2e1587]: Order Number
+                - generic [ref=f2e1588]:
+                  - generic [ref=f2e1589] [cursor=pointer]: PW-ORDER-1794902455725
+                  - button [ref=f2e1590]
+              - generic [ref=f2e1594]:
+                - paragraph [ref=f2e1595]: Creation Date
+                - paragraph [ref=f2e1596]: 17-11-2026 08:01 AM
+              - generic [ref=f2e1597]:
+                - paragraph [ref=f2e1598]: Channel
+                - generic [ref=f2e1599]: Test11
+            - generic [ref=f2e1601]:
+              - generic [ref=f2e1602]: cod
+              - generic [ref=f2e1603]:
+                - paragraph [ref=f2e1604]: Total Amount
+                - paragraph [ref=f2e1605]: ₹59.00
+              - generic [ref=f2e1606]:
+                - paragraph [ref=f2e1607]: COD Amount
+                - paragraph [ref=f2e1608]: ₹59.00
+            - generic [ref=f2e1609]:
+              - paragraph [ref=f2e1610]: Products
+              - generic [ref=f2e1611]:
+                - paragraph [ref=f2e1612]: polo
+                - paragraph [ref=f2e1613]: "Qty: 1"
+            - generic [ref=f2e1614]:
+              - paragraph [ref=f2e1615]: Playwright Order Customer
+              - generic [ref=f2e1616]:
+                - paragraph [ref=f2e1617]: "9876543210"
+                - button [ref=f2e1618]
+              - paragraph [ref=f2e1622]: 123 Test Street
+              - paragraph [ref=f2e1623]: Delhi - 110001
+              - paragraph [ref=f2e1624]: Zone - A
+            - generic [ref=f2e1625]:
+              - generic [ref=f2e1626]:
+                - generic [ref=f2e1627]:
+                  - paragraph [ref=f2e1628]: Box Size (L × W × H)
+                  - generic [ref=f2e1629]: "|"
+                  - button [ref=f2e1630]
+                - paragraph [ref=f2e1634]: 10x12x14
+              - generic [ref=f2e1635]:
+                - paragraph [ref=f2e1636]: Dead Weight
+                - paragraph [ref=f2e1637]: 0.20 kg
+              - generic [ref=f2e1638]:
+                - paragraph [ref=f2e1639]: Volumetric Weight
+                - paragraph [ref=f2e1640]: 0.34 kg
+            - generic [ref=f2e1641]:
+              - generic [ref=f2e1642]:
+                - generic [ref=f2e1643]:
+                  - paragraph [ref=f2e1644]: Order Status
+                  - generic [ref=f2e1645]: New
+                - generic [ref=f2e1646]:
+                  - paragraph [ref=f2e1647]: Tracking (AWB)
+                  - paragraph [ref=f2e1648]: NA
+              - generic [ref=f2e1649]:
+                - generic [ref=f2e1650]:
+                  - paragraph [ref=f2e1651]: Courier Partner
+                  - paragraph [ref=f2e1652]: —
+                - generic [ref=f2e1653]:
+                  - paragraph [ref=f2e1654]: Assigned On
+                  - paragraph [ref=f2e1655]: NA
+            - generic [ref=f2e1656]:
+              - button "Ship" [ref=f2e1657]
+              - button "View Order" [ref=f2e1658] [cursor=pointer]
+          - generic [ref=f2e1660]:
+            - checkbox [ref=f2e1662]
+            - generic [ref=f2e1663]:
+              - generic [ref=f2e1664]:
+                - paragraph [ref=f2e1665]: Order Number
+                - generic [ref=f2e1666]:
+                  - generic [ref=f2e1667] [cursor=pointer]: PW-ORDER-1794902319793
+                  - button [ref=f2e1668]
+              - generic [ref=f2e1672]:
+                - paragraph [ref=f2e1673]: Creation Date
+                - paragraph [ref=f2e1674]: 17-11-2026 07:59 AM
+              - generic [ref=f2e1675]:
+                - paragraph [ref=f2e1676]: Channel
+                - generic [ref=f2e1677]: Test11
+            - generic [ref=f2e1679]:
+              - generic [ref=f2e1680]: cod
+              - generic [ref=f2e1681]:
+                - paragraph [ref=f2e1682]: Total Amount
+                - paragraph [ref=f2e1683]: ₹1768.82
+              - generic [ref=f2e1684]:
+                - paragraph [ref=f2e1685]: COD Amount
+                - paragraph [ref=f2e1686]: ₹1768.82
+            - generic [ref=f2e1687]:
+              - paragraph [ref=f2e1688]: Products
+              - generic [ref=f2e1689]:
+                - paragraph [ref=f2e1690]: Playwright Complete Detail Product
+                - paragraph [ref=f2e1691]: "Qty: 1"
+            - generic [ref=f2e1692]:
+              - paragraph [ref=f2e1693]: Playwright Order Customer
+              - generic [ref=f2e1694]:
+                - paragraph [ref=f2e1695]: "9876543210"
+                - button [ref=f2e1696]
+              - paragraph [ref=f2e1700]: 123 Test Street
+              - paragraph [ref=f2e1701]: Delhi - 110001
+              - paragraph [ref=f2e1702]: Zone - A
+            - generic [ref=f2e1703]:
+              - generic [ref=f2e1704]:
+                - generic [ref=f2e1705]:
+                  - paragraph [ref=f2e1706]: Box Size (L × W × H)
+                  - generic [ref=f2e1707]: "|"
+                  - button [ref=f2e1708]
+                - paragraph [ref=f2e1712]: 10x12x14
+              - generic [ref=f2e1713]:
+                - paragraph [ref=f2e1714]: Dead Weight
+                - paragraph [ref=f2e1715]: 0.20 kg
+              - generic [ref=f2e1716]:
+                - paragraph [ref=f2e1717]: Volumetric Weight
+                - paragraph [ref=f2e1718]: 0.34 kg
+            - generic [ref=f2e1719]:
+              - generic [ref=f2e1720]:
+                - generic [ref=f2e1721]:
+                  - paragraph [ref=f2e1722]: Order Status
+                  - generic [ref=f2e1723]: New
+                - generic [ref=f2e1724]:
+                  - paragraph [ref=f2e1725]: Tracking (AWB)
+                  - paragraph [ref=f2e1726]: NA
+              - generic [ref=f2e1727]:
+                - generic [ref=f2e1728]:
+                  - paragraph [ref=f2e1729]: Courier Partner
+                  - paragraph [ref=f2e1730]: —
+                - generic [ref=f2e1731]:
+                  - paragraph [ref=f2e1732]: Assigned On
+                  - paragraph [ref=f2e1733]: NA
+            - generic [ref=f2e1734]:
+              - button "Ship" [ref=f2e1735]
+              - button "View Order" [ref=f2e1736] [cursor=pointer]
+        - generic [ref=f2e1737]:
+          - generic [ref=f2e1738]:
+            - generic [ref=f2e1739]: Showing 1–20 of 30 orders
+            - generic [ref=f2e1740]:
+              - generic [ref=f2e1741]: "Rows per page:"
+              - combobox [ref=f2e1742]:
+                - option "20" [selected]
+                - option "50"
+                - option "100"
+          - generic [ref=f2e1743]:
+            - button "«" [disabled] [ref=f2e1744]
+            - button "Prev" [disabled] [ref=f2e1745]
+            - button "1" [ref=f2e1746]
+            - button "2" [ref=f2e1747]
+            - button "Next" [ref=f2e1748]
+            - button "»" [ref=f2e1749]
+  - region "Notifications alt+T":
+    - list:
+      - listitem [ref=f2e1750]:
+        - button "Close toast" [ref=f2e1751] [cursor=pointer]
+        - generic [ref=f2e1760]: "Delhivery Error: ['Crashing while saving package due to exception suspicious order/consignee. Package might have been partially saved.']"
+```
+
+# Test source
+
+```ts
+  75  | 		this.createOrderButton = page.getByRole('button', { name: /^Create Order$/i });
+  76  | 	}
+  77  | 
+  78  | 	async open() {
+  79  | 		await this.page.goto('/manage-orders', { waitUntil: 'domcontentloaded' });
+  80  | 		await this.waitForLoad();
+  81  | 	}
+  82  | 
+  83  | 	async openCreateOrder() {
+  84  | 		await this.addOrderButton.waitFor({ state: 'visible', timeout: 15000 });
+  85  | 		await this.addOrderButton.click();
+  86  | 		await expect(this.createOrderHeading).toBeVisible({ timeout: 30000 });
+  87  | 	}
+  88  | 
+  89  | 	async createOrder(details: OrderDetails) {
+  90  | 		await this.openCreateOrder();
+  91  | 
+  92  | 		await this.mobileInputs.first().fill(details.customerMobile);
+  93  | 		await this.fullNameInputs.first().fill(details.customerName);
+  94  | 		await this.addressInputs.first().fill(details.address);
+  95  | 		await this.pincodeInputs.first().fill(details.pincode);
+  96  | 		if (details.email) {
+  97  | 			await this.emailInputs.first().fill(details.email);
+  98  | 		}
+  99  | 		await this.selectPaymentMethod(details.paymentMethod ?? 'COD');
+  100 | 		await this.billingSameAsDeliveryCheckbox.check();
+  101 | 
+  102 | 		await this.skuInput.fill(details.sku);
+  103 | 		await this.productNameInput.fill(details.productName);
+  104 | 		await this.unitPriceInput.fill(details.unitPrice);
+  105 | 		await this.quantityInput.fill(details.quantity);
+  106 | 		await this.discountInput.fill(details.discount ?? '0');
+  107 | 		await this.taxRateInput.fill(details.taxRate ?? '18');
+  108 | 
+  109 | 		await this.packageWeightInput.fill(details.deadWeight);
+  110 | 		await this.packageDimensionInputs.nth(0).fill(details.length);
+  111 | 		await this.packageDimensionInputs.nth(1).fill(details.breadth);
+  112 | 		await this.packageDimensionInputs.nth(2).fill(details.height);
+  113 | 		await this.orderNumberInput.fill(details.orderNumber);
+  114 | 
+  115 | 		await this.createOrderButton.click();
+  116 | 		await expect.poll(async () => {
+  117 | 			const urlOk = /manage-orders|orders\/create/i.test(this.page.url());
+  118 | 			const ordersTableVisible = await this.page.getByText(/Order Number|Showing .* of .* orders/i).first().isVisible().catch(() => false);
+  119 | 			const formHidden = await this.createOrderHeading.isVisible().catch(() => false) === false;
+  120 | 			return urlOk || ordersTableVisible || formHidden;
+  121 | 		}, {
+  122 | 			timeout: 30000,
+  123 | 			message: 'Expected the order flow to leave the create form or show the orders workspace.',
+  124 | 		}).toBeTruthy();
+  125 | 	}
+  126 | 
+  127 | 	async selectPaymentMethod(paymentMethod: 'COD' | 'Prepaid') {
+  128 | 		const paymentOption = this.page.locator('p').filter({ hasText: new RegExp(`^${paymentMethod}$`, 'i') }).last();
+  129 | 
+  130 | 		await paymentOption.waitFor({ state: 'visible', timeout: 15000 });
+  131 | 		await paymentOption.click({ force: true });
+  132 | 		await expect(this.page.getByText('Please select a payment method', { exact: true })).toBeHidden({ timeout: 5000 });
+  133 | 	}
+  134 | 
+  135 | 	async createShipment(orderNumber: string) {
+  136 | 		const orderNumberText = this.page.getByText(orderNumber, { exact: true }).first();
+  137 | 		await expect(orderNumberText, `Expected the newly created order ${orderNumber} to be visible.`)
+  138 | 			.toBeVisible({ timeout: 30000 });
+  139 | 
+  140 | 		const orderCard = orderNumberText.locator('xpath=ancestor::*[.//button[normalize-space(.)="Ship"]][1]');
+  141 | 		const openShipmentButton = orderCard.getByRole('button', { name: /^Ship$/i });
+  142 | 		await openShipmentButton.waitFor({ state: 'visible', timeout: 15000 });
+  143 | 		await openShipmentButton.click();
+  144 | 
+  145 | 		await expect(this.page.getByRole('heading', { name: /^Order Details$/i })).toBeVisible({ timeout: 15000 });
+  146 | 
+  147 | 		await this.page.locator('.flex.flex-col.items-center.justify-center.py-12').waitFor({ state: 'hidden', timeout: 30000 }).catch(() => {});
+  148 | 
+  149 | 		const confirmShipmentButton = this.page.getByRole('button', { name: /^SHIP\s*(>>)?$/i }).last();
+  150 | 		await confirmShipmentButton.waitFor({ state: 'visible', timeout: 15000 });
+  151 | 		await confirmShipmentButton.click();
+  152 | 		await expect.poll(async () => {
+  153 | 			return await this.page.getByText(/^Packed|^Manifested|^Dispatched/i).first().isVisible().catch(() => false)
+  154 | 				|| await this.page.getByText(/AWB|Tracking/i).first().isVisible().catch(() => false);
+  155 | 		}, { timeout: 30000 }).toBeTruthy();
+  156 | 	}
+  157 | 
+  158 | 	async cancelOrder(orderNumber: string) {
+  159 | 		const orderNumberText = this.page.getByText(orderNumber, { exact: true }).first();
+  160 | 		await expect(orderNumberText, `Expected the shipped order ${orderNumber} to be visible before cancellation.`)
+  161 | 			.toBeVisible({ timeout: 30000 });
+  162 | 
+  163 | 		const orderRow = orderNumberText.locator('xpath=ancestor::*[.//button[normalize-space(.)="View Order"]][1]');
+  164 | 		await orderRow.waitFor({ state: 'visible', timeout: 15000 });
+  165 | 
+  166 | 		const drawer = this.page.locator('.fixed.right-0').first();
+  167 | 		if (await drawer.isVisible().catch(() => false)) {
+  168 | 			const closeButton = drawer.getByRole('button').first();
+  169 | 			await closeButton.click({ force: true });
+  170 | 			await drawer.waitFor({ state: 'hidden', timeout: 10000 }).catch(() => {});
+  171 | 		}
+  172 | 
+  173 | 		const checkbox = orderRow.getByRole('checkbox').first();
+  174 | 		await checkbox.waitFor({ state: 'visible', timeout: 15000 });
+> 175 | 		await checkbox.check({ force: true });
+      |                  ^ Error: locator.check: Clicking the checkbox did not change its state
+  176 | 
+  177 | 		const bulkActionButton = this.page.getByRole('button', { name: /Select Bulk Action/i }).first();
+  178 | 		await bulkActionButton.waitFor({ state: 'visible', timeout: 15000 });
+  179 | 		await bulkActionButton.click({ force: true });
+  180 | 
+  181 | 		const cancelButton = this.page.getByRole('button', { name: /^Cancel$/i }).first();
+  182 | 		await cancelButton.waitFor({ state: 'visible', timeout: 15000 });
+  183 | 		await cancelButton.click({ force: true });
+  184 | 
+  185 | 		await expect.poll(async () => {
+  186 | 			const rowText = await orderRow.innerText().catch(() => '');
+  187 | 			const cancellationVisible = await this.page.getByText(/cancelled|canceled/i).first().isVisible().catch(() => false);
+  188 | 			return /cancelled|canceled/i.test(rowText) || cancellationVisible;
+  189 | 		}, {
+  190 | 			timeout: 30000,
+  191 | 			message: `Expected order ${orderNumber} to be cancelled after the bulk cancellation action.`,
+  192 | 		}).toBeTruthy();
+  193 | 	}
+  194 | 
+  195 | 	async waitForLoad() {
+  196 | 		await expect(this.ordersHeading).toBeVisible({ timeout: 30000 });
+  197 | 	}
+  198 | 
+  199 | 	async searchByAwb(awb: string) {
+  200 | 		await this.searchInput.fill(awb);
+  201 | 	}
+  202 | }
+  203 | 
+```

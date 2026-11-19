@@ -27,4 +27,5 @@ test('add product, create a COD order with it, and ship that order', async ({ pa
   await ordersPage.open();
   await ordersPage.createOrder(order);
   await ordersPage.createShipment(order.orderNumber);
+  await ordersPage.cancelOrder(order.orderNumber);
 });

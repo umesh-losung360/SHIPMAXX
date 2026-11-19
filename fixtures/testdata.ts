@@ -11,7 +11,7 @@ export const PRODUCT_DATA = {
   sku: 'PW-SHARED-PRODUCT',
   productName: 'Playwright Complete Detail Product',
   saleChannel: 'Custom - Test11',
-  unitPrice: '1499',
+  unitPrice: '499',
   discount: '100',
   taxRate: '18',
   description: 'Product created by the Playwright product flow.',
